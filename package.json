@@ -12,7 +12,11 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "format": "prettier --check \"**/*.{js,jsx,json,md}\"",
+    "format:fix": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "lint": "eslint \"**/*.{js,jsx}\"",
+    "lint:fix": "eslint --fix \"**/*.{js,jsx}\""
   },
   "license": "0BSD",
   "dependencies": {
@@ -32,5 +36,22 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.17.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.12T.4",
+    "eslint-plugin-standard": "^4.0.1",
+    "prettier": "^1.18.2",
+    "stylelint": "^11.0.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-scss": "^3.11.1"
   }
 }
