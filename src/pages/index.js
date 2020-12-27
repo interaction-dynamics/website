@@ -80,7 +80,7 @@ const IndexPage = () => (
           <br />
           Design
           <br />
-          Develop
+          Code
         </div>
       </h1>
       <h2 className={style.subTitle}>

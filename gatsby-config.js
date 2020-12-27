@@ -3,6 +3,7 @@ module.exports = {
     title: 'Research, Design, Code',
     siteUrl: 'https://friedrith.github.io/website',
   },
+  pathPrefix: `/website`,
   plugins: [
     {
       resolve: `gatsby-plugin-sass`,
