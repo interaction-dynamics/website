@@ -2,6 +2,7 @@ import React from 'react'
 
 import Layout from '~organisms/Layout'
 import Section from '~organisms/Section'
+import SEO from '~atoms/Seo'
 
 import chatbot from '~images/chatbot.png'
 import virtualReality from '~images/vr.png'
@@ -73,6 +74,7 @@ const link = `mailto:${email}`
 
 const IndexPage = () => (
   <Layout>
+    <SEO />
     <Section className={style.Welcome}>
       <h1 className={style.title}>
         <div className={style.titleBorder}>
@@ -85,7 +87,7 @@ const IndexPage = () => (
       </h1>
       <h2 className={style.subTitle}>
         A cutting-edge design and development agency
-        <br /> to make your digital solution unforgettable
+        <br /> to build an unforgettable digital solution
       </h2>
     </Section>
     <Section className={style.Reason}>

@@ -2,6 +2,9 @@ module.exports = {
   siteMetadata: {
     title: 'Research, Design, Code',
     siteUrl: 'https://friedrith.github.io/website',
+    author: 'Thibault Friedrich',
+    description:
+      '🚀 A cutting-edge design and development agency to build an unforgettable digital solution',
   },
   pathPrefix: `/website`,
   plugins: [
