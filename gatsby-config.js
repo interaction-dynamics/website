@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Research, Design, Code',
-    siteUrl: 'https://thibaultfriedrich.github.io/website',
+    siteUrl: 'https://friedrith.github.io/website',
   },
   plugins: [
     {
