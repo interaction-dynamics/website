@@ -1,0 +1,14 @@
+@import '~styles/responsive';
+
+.Layout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: scroll;
+
+  @include only(lg) {
+    scroll-snap-type: y mandatory;
+  }
+}

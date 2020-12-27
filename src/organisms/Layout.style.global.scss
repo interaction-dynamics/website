@@ -1,0 +1,18 @@
+@import '~styles/colors';
+
+@import url(https://indestructibletype.com/fonts/Jost.css);
+@import url(https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css);
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: $background;
+
+  font-family: Jost, Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}

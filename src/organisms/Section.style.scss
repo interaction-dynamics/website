@@ -1,0 +1,16 @@
+@import '~styles/responsive';
+@import '~styles/fonts';
+
+.Section {
+  @extend .normal;
+  padding-bottom: 4rem;
+  min-height: 100vh;
+
+  position: relative;
+
+  // padding: 3 * $marginVertical 0;
+  box-sizing: border-box;
+
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+}

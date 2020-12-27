@@ -1,0 +1,55 @@
+@import '~styles/colors';
+
+.title {
+  font-family: Jost, Arial, Helvetica, sans-serif;
+
+  font-weight: 200;
+
+  font-size: 2rem;
+  line-height: 2.7rem;
+  letter-spacing: 0.2rem;
+
+  @include only(lg) {
+    font-size: 3rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.15rem;
+  }
+
+  color: $primary;
+}
+
+.normal {
+  font-family: Jost, Arial, Helvetica, sans-serif;
+
+  font-weight: 200;
+  letter-spacing: 0.1rem;
+
+  font-size: 1.3rem;
+  line-height: 2rem;
+
+  @include only(lg) {
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
+
+  color: $primary_hue1;
+}
+
+.small {
+  font-family: Jost, Arial, Helvetica, sans-serif;
+
+  font-size: 1rem;
+  line-height: 1.6rem;
+
+  @include only(lg) {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.strong {
+  font-family: Jost, Arial, Helvetica, sans-serif;
+
+  font-weight: 300;
+  color: $primary;
+}

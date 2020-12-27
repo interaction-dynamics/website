@@ -1,0 +1,365 @@
+@import '~styles/colors';
+@import '~styles/layouts';
+@import '~styles/responsive';
+@import '~styles/fonts';
+
+.content {
+  @extend .normal;
+  margin: 0;
+  padding: 0;
+
+  @include only(lg) {
+    margin: auto;
+    max-width: 1000px;
+  }
+
+  .title {
+    @extend .title;
+    text-align: center;
+
+    @include only(lg) {
+      text-align: left;
+    }
+    margin: 0;
+    padding: 0;
+    padding-bottom: 3rem;
+  }
+}
+
+p,
+.paragraph {
+  margin: 0;
+  padding: 0;
+}
+
+p + p,
+.paragraph + .paragraph {
+  padding-top: 4rem;
+}
+
+strong {
+  @extend .strong;
+}
+
+.Center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: $padding;
+  padding-right: $padding;
+
+  text-align: center;
+
+  @include only(lg) {
+    padding: 2 * $padding;
+  }
+}
+
+.Welcome {
+  @extend .Center;
+  .title {
+    text-align: left;
+    font-size: 3rem;
+    line-height: 4rem;
+    // text-transform: uppercase;
+    // font-variant: small-caps;
+
+    @include only(lg) {
+      font-size: 5rem;
+      line-height: 6rem;
+    }
+
+    font-weight: 425;
+    letter-spacing: 0.2rem;
+    color: $primary;
+    margin: 0;
+    padding: 0;
+
+    position: relative;
+  }
+
+  $width: 4px;
+  $length: 40px;
+
+  @include only(lg) {
+    font-size: 5rem;
+    line-height: 6rem;
+  }
+
+  .titleBorder {
+    padding: $width 3 * $width;
+  }
+
+  .subTitle {
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+    letter-spacing: 0.2rem;
+
+    @include only(lg) {
+      font-size: 2.7rem;
+      line-height: 3.6rem;
+      letter-spacing: 0.15rem;
+    }
+
+    font-weight: 200;
+    color: $primary_hue1;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    padding-top: 3rem;
+  }
+}
+
+.Reason {
+  @extend .Center;
+
+  strong {
+    @extend .normal;
+    @extend .strong;
+    text-align: center;
+
+    @include only(lg) {
+      text-align: justify;
+    }
+  }
+}
+
+.Technologies {
+  @extend .Center;
+
+  .title {
+    @extend .normal;
+    color: $primary;
+  }
+
+  .list {
+    flex: 0 1 auto;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include only(lg) {
+      justify-content: center;
+    }
+  }
+
+  .Technology {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    flex: 0 0 7rem;
+
+    @include only(lg) {
+      padding: 1rem 2rem;
+      flex: 0 0 10rem;
+    }
+
+    .icon {
+      height: 3rem;
+
+      @include only(lg) {
+        height: 5rem;
+      }
+    }
+
+    .name {
+      @extend .normal;
+      color: $primary;
+      text-align: center;
+      padding-top: 0.4rem;
+
+      @include only(lg) {
+        padding-top: 0.6rem;
+      }
+    }
+  }
+}
+
+.Benefits {
+  @extend .Center;
+  text-align: left;
+
+  .content {
+    @include only(lg) {
+      margin: auto;
+      max-width: 1000px;
+    }
+  }
+
+  .Benefit {
+    padding-bottom: 1rem;
+    @extend .normal;
+
+    .conclusion {
+      padding-left: 1.5rem;
+      &::before {
+        display: inline-block;
+        content: '→';
+        color: white;
+        padding-right: 0.5rem;
+      }
+    }
+  }
+}
+
+.Mission {
+  @extend .Center;
+  text-align: left;
+
+  .content {
+    @include only(lg) {
+      margin: auto;
+      max-width: 1000px;
+    }
+  }
+
+  .paragraph {
+    color: $primary;
+  }
+
+  .list {
+    color: $primary_hue1;
+
+    $itemPadding: 4rem;
+
+    .item {
+      padding-top: 1rem;
+      padding-left: 1rem;
+      @extend .normal;
+
+      &::before {
+        display: inline-block;
+        content: '→';
+        padding-right: 0.5rem;
+      }
+
+      @include only(lg) {
+        padding-top: 1.5rem;
+
+        @for $i from 1 through 5 {
+          &:nth-child(#{$i}) {
+            padding-left: $i * $itemPadding;
+          }
+        }
+      }
+    }
+  }
+}
+
+.Methods {
+  @extend .Center;
+  text-align: left;
+
+  .content {
+    max-width: none;
+  }
+
+  .title,
+  p {
+    @include only(lg) {
+      margin: auto;
+      max-width: 1000px;
+    }
+  }
+
+  .list {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    padding-top: 1rem;
+    flex-wrap: wrap;
+
+    @include only(lg) {
+      margin: auto;
+      max-width: 1200px;
+    }
+  }
+
+  p {
+    color: $primary;
+  }
+
+  .Method {
+    text-align: center;
+    padding: 1rem;
+    @extend .normal;
+
+    @include only(lg) {
+      flex: 0 0 200px;
+      padding: 2rem 1rem;
+    }
+
+    .icon {
+      color: $primary;
+      font-size: 3rem;
+    }
+
+    .label {
+      @extend .small;
+      font-weight: 300;
+      color: $primary;
+    }
+
+    .description {
+      padding-top: 1rem;
+      @extend .small;
+    }
+  }
+}
+
+.Contact {
+  @extend .Center;
+  text-align: center;
+
+  @include only(lg) {
+    text-align: left;
+  }
+
+  .callToAction {
+    @extend .small;
+    padding-top: 2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .button {
+    display: block;
+    @extend .normal;
+    color: $background;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 2px 15px;
+
+    // border-radius: 0.5rem;
+    cursor: pointer;
+
+    background: $primary;
+    border: 0;
+
+    outline: none;
+    user-select: none;
+
+    margin: 20px;
+    transition: all 0.08s linear;
+    &:hover {
+      padding: 2px 19px;
+      margin: 20px 16px;
+    }
+  }
+
+  .link {
+    @extend .strong;
+  }
+
+  .feedback {
+    font-size: 1rem;
+  }
+}

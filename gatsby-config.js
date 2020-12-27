@@ -3,7 +3,15 @@ module.exports = {
     title: 'website',
   },
   plugins: [
-    'gatsby-plugin-sass',
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        // Override the file regex for SASS
+        sassRuleTest: /\.style.global\.s(a|c)ss$/,
+        // Override the file regex for CSS modules
+        sassRuleModulesTest: /\.style\.s(a|c)ss$/,
+      },
+    },
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
