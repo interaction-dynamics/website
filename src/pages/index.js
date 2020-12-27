@@ -1,8 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React from 'react'
 
 import Layout from '~organisms/Layout'
 import Section from '~organisms/Section'
-import Icon from '~atoms/Icon'
 
 import chatbot from '~images/chatbot.png'
 import virtualReality from '~images/vr.png'
