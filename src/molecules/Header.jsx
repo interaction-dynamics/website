@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
 import style from './Header.style'
@@ -13,6 +13,7 @@ const links = [
 const Header = ({ children, className }) => {
   return (
     <header className={`${style.Header} ${className}`}>
+      {children}
       <div className={style.links}>
         {links.map(link => (
           <a className={style.link} href={link.href} key={link.href}>

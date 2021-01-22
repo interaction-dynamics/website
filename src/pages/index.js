@@ -107,7 +107,7 @@ const IndexPage = () => {
     <Layout>
       <SEO />
       <Welcome />
-      <Section className={style.Reason} id="reasons">
+      {/* <Section className={style.Reason} id="reasons">
         <div className={style.background}>
           {icons.map((Icon, index) => (
             <PulsingCircle key={index}>
@@ -125,7 +125,7 @@ const IndexPage = () => {
             with a smealess and immersive user experience.
           </div>
         </div>
-      </Section>
+          </Section> */}
       <Section className={style.Reason}>
         <div className={style.content}>
           <p>

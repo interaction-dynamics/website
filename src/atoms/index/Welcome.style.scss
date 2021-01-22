@@ -6,16 +6,13 @@
 
 .Welcome {
   @extend .Center;
-  flex-direction: row;
-
   position: relative;
 
   .content {
     @extend .content;
     text-align: left;
-    flex: 1 1 auto;
-    margin: auto;
     max-width: none;
+    width: 100%;
 
     @include only(lg) {
       padding-left: 15vw;
