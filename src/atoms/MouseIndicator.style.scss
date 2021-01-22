@@ -1,0 +1,57 @@
+@import '~styles/responsive';
+
+.MouseIndicator {
+  position: absolute;
+  bottom: 4rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: scale(1.5);
+
+  // https://medium.com/@ferie/detect-a-touch-device-with-only-css-9f8e30fa1134
+  @media (hover: none) {
+    display: none;
+  }
+
+  .icon {
+    width: 25px;
+    height: 45px;
+    border: 2px solid white;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+
+    background: none;
+    outline: none;
+  }
+
+  @keyframes wheelUpDown {
+    0% {
+      margin-top: 2px;
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    100% {
+      margin-top: 20px;
+      opacity: 0;
+    }
+  }
+
+  .wheel {
+    height: 6px;
+    margin: 2px auto 0;
+    display: block;
+    width: 3px;
+    background-color: white;
+    border-radius: 50%;
+    // -webkit-animation: 1.6s ease infinite wheel-up-down;
+    // -moz-animation: 1.6s ease infinite wheel-up-down;
+    animation: wheelUpDown 1.6s ease infinite;
+  }
+}

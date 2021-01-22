@@ -1,0 +1,51 @@
+@import '~styles/responsive';
+@import '~styles/fonts';
+@import '~styles/colors';
+@import '~styles/layouts';
+
+.Header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  font-weight: 425;
+  letter-spacing: 0.2rem;
+  color: $primary;
+
+  @include only(lg) {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+
+  @include only(xs) {
+    display: none;
+  }
+}
+
+.links {
+  text-align: right;
+
+  @include only(md) {
+    padding-top: $padding;
+    padding-right: $padding;
+  }
+
+  padding-top: 4rem;
+  padding-right: 5rem;
+}
+
+.link {
+  text-decoration: none;
+  color: $primary;
+  cursor: pointer;
+
+  transition: color 0.2s linear;
+  &:hover {
+    color: $secondary;
+  }
+}

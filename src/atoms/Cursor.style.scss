@@ -1,0 +1,26 @@
+@import '~styles/colors';
+
+// :global {
+//   * {
+//     cursor: none;
+//   }
+// }
+
+.Cursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: 1000;
+  pointer-events: none;
+
+  $width: 20px;
+
+  margin-left: -$width/2;
+  margin-top: -$width / 2;
+
+  height: $width;
+  width: $width;
+  border-radius: 999rem;
+  background-color: $secondary;
+}

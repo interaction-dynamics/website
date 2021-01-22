@@ -1,1 +1,38 @@
-$padding: 1rem;
+@import '~styles/responsive';
+
+$padding: 2rem;
+
+.Center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: $padding;
+
+  text-align: center;
+}
+
+.content {
+  @extend .normal;
+  margin: 0;
+  padding: 0;
+
+  position: relative;
+
+  @include only(lg) {
+    margin: auto;
+    max-width: 1000px;
+  }
+
+  .title {
+    @extend .title;
+    text-align: center;
+
+    @include only(lg) {
+      text-align: left;
+    }
+    margin: 0;
+    padding: 0;
+    padding-bottom: 3rem;
+  }
+}

@@ -1,0 +1,15 @@
+@keyframes blink {
+  from,
+  to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.blinkingCursor {
+  animation-iteration-count: infinite;
+  animation-name: blink;
+  animation-duration: 1s;
+}

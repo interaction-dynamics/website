@@ -9,6 +9,6 @@
   overflow: scroll;
 
   @include only(lg) {
-    scroll-snap-type: y mandatory;
+    // scroll-snap-type: y mandatory;
   }
 }

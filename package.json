@@ -37,7 +37,11 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "react-reveal": "^1.2.2",
+    "react-transition-group": "^4.4.1",
+    "react-typewriter": "^0.4.1",
+    "typewriter-react": "^1.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
@@ -50,6 +54,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-standard": "^4.0.1",
+    "gatsby-plugin-react-svg": "^3.0.0",
     "prettier": "^1.18.2",
     "stylelint": "^11.0.0",
     "stylelint-config-recommended": "^3.0.0",
