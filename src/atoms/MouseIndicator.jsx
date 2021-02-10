@@ -1,21 +1,18 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useLayoutEffect } from 'react'
 import { useSpring, animated } from 'react-spring'
 
 import style from './MouseIndicator.style'
 
-// https://www.react-spring.io/docs/hooks/basics
-
 const MouseIndicator = () => {
-  const [isVisible, setVisibility] = useState(true)
-
+  // https://www.react-spring.io/docs/hooks/basics
   const [{ opacity }, set] = useSpring(() => ({ opacity: 1 }))
 
   const hide = () => set({ opacity: 0 })
 
-  useEffect(() => {
-    const listener = window.addEventListener('scroll', hide, { capture: true })
+  useLayoutEffect(() => {
+    window.addEventListener('scroll', hide, { capture: true })
 
-    return window.removeEventListener('scroll', listener)
+    return window.removeEventListener('scroll', hide)
   }, [])
 
   const onClick = () => {
@@ -38,6 +35,7 @@ const MouseIndicator = () => {
         transform: opacity.interpolate(
           o => `translateY(${(1 - o) * 500}px) scale(1.5)`
         ),
+        display: opacity.interpolate(o => (o === 0 ? 'none' : 'display')),
       }}
     >
       <button className={style.icon} onClick={onClick} type="button">

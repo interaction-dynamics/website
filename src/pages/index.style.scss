@@ -18,96 +18,118 @@ strong {
   @extend .strong;
 }
 
-.Reason {
+.NewProduct {
   @extend .Center;
 
-  strong {
-    @extend .normal;
-    @extend .strong;
-    text-align: center;
+  // TODO add fireworks https://jsfiddle.net/elin/7m3bL/
 
-    @include only(lg) {
-      text-align: justify;
-    }
+  .icon {
+    padding-top: 4rem;
+    // svg {
+    //   fill: $secondary;
+    //   width: 20rem;
+    //   cursor: pointer;
+    //   transition: linear 1s fill;
+
+    //   max-width: 50vw;
+
+    //   &:hover {
+    //     fill: $ternary;
+    //   }
+    // }
   }
+}
 
-  .background {
-    position: absolute;
-    top: 5rem;
-    left: 5rem;
-    right: 5rem;
-    bottom: 5rem;
-  }
+.Reasons {
+  @extend .Center;
 
-  .big {
-    font-size: 1.7rem;
-    line-height: 2.2rem;
-    letter-spacing: 0.2rem;
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    @include only(lg) {
-      font-size: 2.7rem;
-      line-height: 3.6rem;
-      letter-spacing: 0.15rem;
+    @include only(xs) {
+      flex-wrap: wrap;
     }
 
-    font-weight: 400;
-    color: $primary;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    padding-top: 3rem;
+    .reason {
+      flex: 1 1 auto;
+      text-align: center;
+    }
+
+    .icon {
+      flex: 1 1 auto;
+      padding: 0 2rem;
+      text-align: center;
+
+      font-size: 2rem;
+
+      color: $secondary;
+
+      font-size: 10rem;
+      line-height: 10.5rem;
+
+      @include only(sm) {
+        font-size: 15rem;
+        line-height: 16.5rem;
+      }
+    }
   }
 }
 
 .Technologies {
   @extend .Center;
 
-  .title {
-    @extend .normal;
-    color: $primary;
-  }
-
-  .list {
-    flex: 0 1 auto;
+  .content {
     display: flex;
-    align-items: stretch;
-    justify-content: center;
-    flex-wrap: wrap;
 
-    @include only(lg) {
-      justify-content: center;
-    }
-  }
-
-  .Technology {
-    display: flex;
     align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 1rem;
-    flex: 0 0 7rem;
+    flex-wrap: wrap;
+    justify-content: center;
 
-    @include only(lg) {
-      padding: 1rem 2rem;
-      flex: 0 0 10rem;
+    margin: auto;
+    max-width: none;
+
+    .left,
+    .right {
+      @include only(sm) {
+        flex: 0 0 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      padding-bottom: 2rem;
     }
 
-    .icon {
-      height: 3rem;
-
+    .left {
       @include only(lg) {
-        height: 5rem;
+        justify-content: flex-end;
+        padding-right: 10rem;
       }
     }
 
-    .name {
-      @extend .normal;
-      color: $primary;
+    .right {
       text-align: center;
-      padding-top: 0.4rem;
+      @include only(md) {
+        text-align: left;
+      }
 
       @include only(lg) {
-        padding-top: 0.6rem;
+        justify-content: flex-start;
+        padding-left: 10rem;
+      }
+    }
+
+    .centerLeft,
+    .centerRight {
+      width: 80%;
+
+      @include only(xs) {
+        margin: auto;
+      }
+
+      @include only(lg) {
+        width: 50%;
       }
     }
   }
@@ -142,105 +164,39 @@ strong {
 
 .Mission {
   @extend .Center;
-  text-align: left;
+  text-align: center;
+  background-color: $secondary;
+  min-height: 60vh;
 
   .content {
     @include only(lg) {
       margin: auto;
       max-width: 1000px;
     }
-  }
 
-  .paragraph {
-    color: $primary;
-  }
+    .top,
+    .bottom {
+      color: $background;
 
-  .list {
-    color: $primary_hue1;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
 
-    $itemPadding: 4rem;
-
-    .item {
-      padding-top: 1rem;
-      padding-left: 1rem;
-      @extend .normal;
-
-      &::before {
-        display: inline-block;
-        content: '→';
-        padding-right: 0.5rem;
-      }
-
-      @include only(lg) {
-        padding-top: 1.5rem;
-
-        @for $i from 1 through 5 {
-          &:nth-child(#{$i}) {
-            padding-left: $i * $itemPadding;
-          }
-        }
+      @include only(sm) {
+        font-size: 1.7rem;
+        line-height: 2rem;
       }
     }
-  }
-}
 
-.Methods {
-  @extend .Center;
-  text-align: left;
-
-  .content {
-    max-width: none;
-  }
-
-  .title,
-  p {
-    @include only(lg) {
-      margin: auto;
-      max-width: 1000px;
-    }
-  }
-
-  .list {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    padding-top: 1rem;
-    flex-wrap: wrap;
-
-    @include only(lg) {
-      margin: auto;
-      max-width: 1200px;
-    }
-  }
-
-  p {
-    color: $primary;
-  }
-
-  .Method {
-    text-align: center;
-    padding: 1rem;
-    @extend .normal;
-
-    @include only(lg) {
-      flex: 0 0 200px;
-      padding: 2rem 1rem;
-    }
-
-    .icon {
+    .middle {
       color: $primary;
-      font-size: 3rem;
-    }
 
-    .label {
-      @extend .small;
-      font-weight: 300;
-      color: $primary;
-    }
+      font-size: 2rem;
+      line-height: 2.5rem;
 
-    .description {
-      padding-top: 1rem;
-      @extend .small;
+      @include only(sm) {
+        font-size: 5rem;
+        line-height: 9.5rem;
+      }
     }
   }
 }
@@ -248,44 +204,33 @@ strong {
 .Contact {
   @extend .Center;
   text-align: center;
+  min-height: 80vh;
 
   @include only(lg) {
     text-align: left;
   }
 
-  .callToAction {
-    @extend .small;
-    padding-top: 2rem;
+  .title {
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    @extend .normal;
+
+    font-size: 2rem;
+    line-height: 2.5rem;
+
+    @include only(sm) {
+      font-size: 4rem;
+      line-height: 5rem;
+    }
   }
 
-  .button {
-    display: block;
-    @extend .normal;
-    color: $background;
+  .help {
     font-size: 1.4rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    padding: 2px 15px;
+    line-height: 1.8rem;
+    text-align: center;
 
-    // border-radius: 0.5rem;
-    cursor: pointer;
-
-    background: $primary;
-    border: 0;
-
-    outline: none;
-    user-select: none;
-
-    margin: 20px;
-    transition: all 0.08s linear;
-    &:hover {
-      padding: 2px 19px;
-      margin: 20px 16px;
+    @include only(sm) {
+      font-size: 1.7rem;
+      line-height: 2rem;
     }
   }
 
@@ -295,5 +240,61 @@ strong {
 
   .feedback {
     font-size: 1rem;
+  }
+
+  .socials {
+    padding: 4rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .social {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+
+    color: $ternary;
+    margin: 0 2rem;
+
+    transition: color 0.3s linear;
+
+    &:hover {
+      color: $secondary;
+    }
+
+    .icon {
+      width: 3rem;
+    }
+
+    .label {
+      @extend .normal;
+
+      font-size: 0.8rem;
+      line-height: 1rem;
+
+      @include only(sm) {
+        font-size: 1rem;
+        line-height: 1.3rem;
+      }
+
+      color: currentColor;
+    }
+  }
+}
+
+.footer {
+  @extend .normal;
+  color: $secondary;
+  font-size: 1rem;
+  text-align: center;
+
+  a {
+    color: $secondary;
   }
 }

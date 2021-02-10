@@ -8,11 +8,25 @@
   @extend .Center;
   position: relative;
 
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+
   .content {
     @extend .content;
     text-align: left;
     max-width: none;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .left {
+      flex: 1 1 auto;
+    }
+
+    .right {
+      flex: 1 1 auto;
+    }
 
     @include only(lg) {
       padding-left: 15vw;
@@ -30,7 +44,7 @@
     opacity: 0;
     animation-fill-mode: forwards;
 
-    @include only(md) {
+    @include only(sm) {
       font-size: 1.2rem;
     }
 
@@ -53,7 +67,7 @@
     font-size: 2rem;
     line-height: 3rem;
 
-    @include only(md) {
+    @include only(sm) {
       font-size: 4rem;
       line-height: 5rem;
     }
@@ -96,4 +110,11 @@
     font-size: 5rem;
     line-height: 6rem;
   }
+}
+
+.button {
+  color: $ternary;
+  opacity: 0.3;
+
+  width: 30rem;
 }

@@ -3,15 +3,13 @@
 
 .Section {
   @extend .normal;
-  padding-bottom: 4rem;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+  padding-bottom: 15rem;
+  padding-top: 15rem;
 
   position: relative;
 
-  // padding: 3 * $marginVertical 0;
-  box-sizing: border-box;
+  // scroll-snap-align: start;
+  // scroll-snap-stop: normal;
 
-  scroll-snap-align: start;
-  scroll-snap-stop: normal;
+  min-height: 50vh;
 }

@@ -62,3 +62,5 @@
 - https://animejs.com/
 - [detect touch screen with css](https://medium.com/@ferie/detect-a-touch-device-with-only-css-9f8e30fa1134)
 - [gatsby accessible on local network](https://github.com/gatsbyjs/gatsby/issues/5801)
+- [Lottie](https://www.npmjs.com/package/react-lottie)
+- https://lordicon.com/editor

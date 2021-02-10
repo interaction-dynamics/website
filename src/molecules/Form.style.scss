@@ -1,0 +1,71 @@
+@import '~styles/fonts';
+@import '~styles/colors';
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+
+  .input,
+  .textarea,
+  .submit {
+    @extend .normal;
+    margin-bottom: 1rem;
+    padding: 0.3rem 1rem;
+
+    outline: none;
+    border: none;
+  }
+
+  .input,
+  .textarea {
+    font-size: 1.5rem;
+    font-weight: 400;
+    background-color: $background_hue2;
+    transition: 0.2s background-color linear;
+
+    &::-webkit-input-placeholder {
+      /* Edge */
+      color: $secondary;
+    }
+
+    &:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: $secondary;
+    }
+
+    &::placeholder {
+      color: $secondary;
+    }
+
+    &:focus {
+      background-color: $ternary;
+    }
+  }
+
+  .submit {
+    background-color: $secondary;
+    color: $primary;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.2s background-color linear;
+
+    &:hover {
+      background-color: $secondary_hue1;
+    }
+
+    &:active {
+      background-color: $secondary_hue2;
+    }
+  }
+
+  .textarea {
+    resize: none;
+    height: 15rem;
+  }
+}

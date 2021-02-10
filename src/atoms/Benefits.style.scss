@@ -1,0 +1,70 @@
+@import '~styles/colors';
+@import '~styles/layouts';
+@import '~styles/responsive';
+@import '~styles/fonts';
+
+.Benefits {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  $width: 7;
+
+  .circle {
+    stroke: $secondary;
+    stroke-width: $width;
+    fill: transparent;
+  }
+
+  .svg {
+    width: 35rem;
+    max-width: 90vw;
+    margin-left: 0rem;
+
+    @include only(lg) {
+      margin-left: 30rem;
+    }
+  }
+
+  .line {
+    stroke: $secondary;
+    stroke-width: $width;
+  }
+
+  .rect {
+    position: relative;
+    fill: $secondary;
+    // stroke: $secondary;
+    // stroke-width: $width;
+
+    // width: 20;
+    // height: 20;
+
+    // transform: rotate(45deg);
+    // transform-origin: 0% 0%;
+  }
+
+  .benefit {
+    position: absolute;
+
+    .title {
+      @extend .normal;
+      font-size: 15px;
+      font-weight: 600;
+      fill: $ternary;
+      // alignment-baseline: middle;
+    }
+
+    .help {
+      @extend .normal;
+      font-size: 15px;
+      font-weight: 600;
+      fill: $primary;
+      // alignment-baseline: middle;
+    }
+  }
+}
