@@ -1,21 +1,11 @@
 import React from 'react'
-import Reveal from 'react-reveal/Reveal'
-import Fade from 'react-reveal/Fade'
-import Slide from 'react-reveal/Slide'
-import { TransitionGroup, CSSTransition } from 'react-transition-group'
-import TypeWriter from 'react-typewriter'
-
-import { graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
 
 import Layout from '~organisms/Layout'
 import Section from '~organisms/Section'
 import SEO from '~atoms/Seo'
-import PulsingCircle from '~atoms/PulsingCircle'
 import TechnologiesPreview from '~atoms/TechnologiesPreview'
 import Benefits from '~atoms/Benefits'
 import Welcome from '~atoms/index/Welcome'
-import Form from '~molecules/Form'
 import BoxPackage from '~atoms/BoxPackage'
 import Center from '~molecules/Center'
 
@@ -24,8 +14,6 @@ import LinkedInIcon from '~assets/svg/socials/linkedin.svg'
 import MediumIcon from '~assets/svg/socials/medium.svg'
 import AdvancedIcon from '~assets/svg/advanced.svg'
 import Standout from '~assets/svg/standout.svg'
-
-import BoxIcon from '~assets/svg/box.svg'
 
 import style from './index.style'
 
