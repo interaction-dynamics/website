@@ -2,6 +2,7 @@
 @import '~styles/layouts';
 @import '~styles/responsive';
 @import '~styles/fonts';
+@import '~styles/animations';
 
 p,
 .paragraph {
@@ -77,6 +78,17 @@ strong {
   }
 }
 
+.AdvancedInteractions,
+.Standout {
+  min-height: 20vh;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  .icon {
+    width: 100%;
+    max-width: 22rem;
+  }
+}
+
 .Technologies {
   @extend .Center;
 
@@ -102,6 +114,11 @@ strong {
     }
 
     .left {
+      text-align: center;
+      @include only(md) {
+        text-align: left;
+      }
+
       @include only(lg) {
         justify-content: flex-end;
         padding-right: 10rem;
@@ -109,11 +126,6 @@ strong {
     }
 
     .right {
-      text-align: center;
-      @include only(md) {
-        text-align: left;
-      }
-
       @include only(lg) {
         justify-content: flex-start;
         padding-left: 10rem;
@@ -162,11 +174,15 @@ strong {
   }
 }
 
+.Challenges {
+  @extend .Center;
+}
+
 .Mission {
   @extend .Center;
   text-align: center;
   background-color: $secondary;
-  min-height: 60vh;
+  min-height: 70vh;
 
   .content {
     @include only(lg) {
@@ -174,6 +190,7 @@ strong {
       max-width: 1000px;
     }
 
+    .before,
     .top,
     .bottom {
       color: $background;
@@ -183,7 +200,7 @@ strong {
 
       @include only(sm) {
         font-size: 1.7rem;
-        line-height: 2rem;
+        line-height: 2.2rem;
       }
     }
 
@@ -197,6 +214,16 @@ strong {
         font-size: 5rem;
         line-height: 9.5rem;
       }
+    }
+
+    .before {
+      @include only(lg) {
+        max-width: 30vw;
+        margin: auto;
+        margin-bottom: 10rem;
+      }
+
+      margin-bottom: 10rem;
     }
   }
 }

@@ -26,3 +26,52 @@ svg {
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
 }
+
+#arm-up {
+  animation: bounce7 2s ease infinite;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+}
+
+@keyframes bounce7 {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-100px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  57% {
+    transform: translateY(-7px);
+  }
+  64% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#arc {
+  animation: size 2s linear infinite;
+  // animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+}
+
+@keyframes size {
+  0% {
+    opacity: 1;
+    // transform: translateX(5.026);
+    // transform: scale(0.5);
+  }
+
+  100% {
+    opacity: 0;
+    // transform: scale(1) translate(5.026px);
+
+    // transform: translateX(5.026);
+  }
+}

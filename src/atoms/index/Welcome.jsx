@@ -15,7 +15,7 @@ export default () => (
     <div className={style.content}>
       <div className={style.left}>
         <div className={style.preTitle}>
-          Digital Product Research, Design & Develop
+          Digital Product Research, Design & Build
         </div>
 
         <h1 className={style.title}>

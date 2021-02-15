@@ -17,10 +17,13 @@ import Benefits from '~atoms/Benefits'
 import Welcome from '~atoms/index/Welcome'
 import Form from '~molecules/Form'
 import BoxPackage from '~atoms/BoxPackage'
+import Center from '~molecules/Center'
 
 import EmailIcon from '~assets/svg/socials/email.svg'
 import LinkedInIcon from '~assets/svg/socials/linkedin.svg'
 import MediumIcon from '~assets/svg/socials/medium.svg'
+import AdvancedIcon from '~assets/svg/advanced.svg'
+import Standout from '~assets/svg/standout.svg'
 
 import BoxIcon from '~assets/svg/box.svg'
 
@@ -85,28 +88,37 @@ const IndexPage = () => {
           </div>
         </div>
       </Section>
-      <Section className={style.Reasons}>
-        <div className={style.content}>
-          <div className={style.reason}>
+      <Section className={style.AdvancedInteractions}>
+        <Center>
+          <Center.Left>
             Your use case requires advanced user interactions?
-          </div>
-          <div className={style.icon}>?</div>
-          <div className={style.reason}>
-            Your want to stand out from your competitors?
-          </div>
-        </div>
+          </Center.Left>
+          <Center.Right>
+            <AdvancedIcon className={style.icon} />
+          </Center.Right>
+        </Center>
+      </Section>
+      <Section className={style.Standout}>
+        <Center>
+          <Center.Left>
+            <Standout className={style.icon} />
+          </Center.Left>
+          <Center.Right>
+            Or your want to stand out from your competitors?
+          </Center.Right>
+        </Center>
       </Section>
       <Section className={style.Technologies}>
         <div className={style.content}>
           <div className={style.left}>
             <div className={style.centerLeft}>
-              <TechnologiesPreview />
+              <strong>State-of-the-art</strong> technologies offer opportunities
+              for customized, smeanless and unique user experiences
             </div>
           </div>
           <div className={style.right}>
             <div className={style.centerRight}>
-              <strong>State-of-the-art</strong> technologies offer opportunities
-              for customized, smeanless and unique user experiences
+              <TechnologiesPreview />
             </div>
           </div>
         </div>
@@ -116,11 +128,18 @@ const IndexPage = () => {
           <Benefits />
         </div>
       </Section>
+      <Section className={style.Challenges}>
+        <div className={style.content}>
+          State-of-the-art technologies provide new <strong>experiences</strong>{' '}
+          and technical <strong>challenges</strong> requiring designers and
+          developers trained to these technologies.
+        </div>
+      </Section>
       <Section className={style.Mission}>
         <div className={style.content}>
-          <div className={style.top}>You need real experts to</div>
+          <div className={style.top}>We are the expert team you need to</div>
           <div className={style.middle}>Design & Build</div>
-          <div className={style.bottom}>Your digital solution</div>
+          <div className={style.bottom}>a great digital solution</div>
         </div>
       </Section>
       <Section className={style.Contact}>

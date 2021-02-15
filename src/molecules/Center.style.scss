@@ -1,0 +1,58 @@
+@import '~styles/colors';
+@import '~styles/layouts';
+@import '~styles/responsive';
+@import '~styles/fonts';
+
+.content {
+  display: flex;
+
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  margin: auto;
+  max-width: none;
+
+  .left,
+  .right {
+    @include only(sm) {
+      flex: 0 0 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    padding-bottom: 2rem;
+  }
+
+  .left {
+    text-align: center;
+    @include only(md) {
+      text-align: left;
+    }
+
+    @include only(lg) {
+      justify-content: flex-end;
+      padding-right: 10rem;
+    }
+  }
+
+  .right {
+    @include only(lg) {
+      justify-content: flex-start;
+      padding-left: 10rem;
+    }
+  }
+
+  .centerLeft,
+  .centerRight {
+    width: 80%;
+
+    @include only(xs) {
+      margin: auto;
+    }
+
+    @include only(lg) {
+      width: 50%;
+    }
+  }
+}
