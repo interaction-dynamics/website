@@ -80,9 +80,11 @@ strong {
 
 .AdvancedInteractions,
 .Standout {
-  min-height: 20vh;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  @extend .Center;
+
+  // min-height: 20vh;
+  // padding-top: 10rem;
+  // padding-bottom: 10rem;
   .icon {
     width: 100%;
     max-width: 22rem;
