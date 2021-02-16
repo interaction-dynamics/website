@@ -79,7 +79,7 @@ const IndexPage = () => {
       <Section className={style.AdvancedInteractions}>
         <Center>
           <Center.Left>
-            Your use case requires advanced user interactions?
+            Your use case requires advanced user interactions?...
           </Center.Left>
           <Center.Right>
             <AdvancedIcon className={style.icon} />
@@ -92,7 +92,7 @@ const IndexPage = () => {
             <Standout className={style.icon} />
           </Center.Left>
           <Center.Right>
-            Or your want to stand out from your competitors?
+            ...or your want to stand out from your competitors?
           </Center.Right>
         </Center>
       </Section>
@@ -118,9 +118,10 @@ const IndexPage = () => {
       </Section>
       <Section className={style.Challenges}>
         <div className={style.content}>
-          State-of-the-art technologies provide new <strong>experiences</strong>{' '}
-          and technical <strong>challenges</strong> requiring designers and
-          developers trained to these technologies.
+          State-of-the-art technologies bring new <strong>challenges</strong> in
+          terms of implementation and <strong>interactions</strong>. You need
+          trained designers and developers to these technologies to fully take{' '}
+          <strong>advantage</strong> of them.
         </div>
       </Section>
       <Section className={style.Mission}>

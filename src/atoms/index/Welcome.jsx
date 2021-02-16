@@ -24,7 +24,7 @@ export default () => (
           <br />
           user experiences
           <br />
-          really{' '}
+          truly{' '}
           <span className={style.adjective}>
             <Prompt words={['seamless', 'immersive', 'magical']} />
           </span>
