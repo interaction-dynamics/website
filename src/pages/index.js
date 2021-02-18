@@ -79,7 +79,7 @@ const IndexPage = () => {
       <Section className={style.AdvancedInteractions}>
         <Center>
           <Center.Left>
-            Your use case requires advanced user interactions?...
+            Your use case requires complex user interactions?...
           </Center.Left>
           <Center.Right>
             <AdvancedIcon className={style.icon} />
@@ -101,7 +101,7 @@ const IndexPage = () => {
           <div className={style.left}>
             <div className={style.centerLeft}>
               <strong>State-of-the-art</strong> technologies offer opportunities
-              for customized, smeanless and unique user experiences
+              for customized, seamless and unique user experiences
             </div>
           </div>
           <div className={style.right}>
@@ -120,7 +120,7 @@ const IndexPage = () => {
         <div className={style.content}>
           State-of-the-art technologies bring new <strong>challenges</strong> in
           terms of implementation and <strong>interactions</strong>. You need
-          trained designers and developers to these technologies to fully take{' '}
+          designers and developers trained in these technologies to fully take{' '}
           <strong>advantage</strong> of them.
         </div>
       </Section>

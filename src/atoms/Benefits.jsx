@@ -36,14 +36,14 @@ const benefits = [
     title: 'Customer acquisition',
     help: ['Reach your customers where', 'they interact the most'],
   },
-  { title: 'User satisfaction', help: ['Provide a natural experience'] },
+  { title: 'User satisfaction', help: ['Provide a intuitive experience'] },
   {
     title: 'Customer retention',
     help: ['Provide an experience adapted', 'to their true needs'],
   },
   {
     title: 'User recommmandations',
-    help: ['Whaou effect caused by', 'futuristic user interface'],
+    help: ['Wow effect caused by', 'futuristic user interface'],
   },
 ]
 

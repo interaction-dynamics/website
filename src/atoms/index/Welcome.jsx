@@ -22,12 +22,12 @@ export default () => (
           <span className={style.stateOfTheArt}>State-of-the-art</span>
           <br /> technologies for
           <br />
-          user experiences
-          <br />
           truly{' '}
           <span className={style.adjective}>
             <Prompt words={['seamless', 'immersive', 'magical']} />
           </span>
+          <br />
+          user experiences
         </h1>
       </div>
       {/* <div className={style.right}>
