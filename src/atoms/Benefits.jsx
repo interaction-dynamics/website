@@ -34,9 +34,9 @@ const BenefitText = ({ title, help, x, y }) => (
 const benefits = [
   {
     title: 'Customer acquisition',
-    help: ['Reach your customers where', 'they interact the most'],
+    help: ['Reach your customers where', 'they interact the best'],
   },
-  { title: 'User satisfaction', help: ['Provide a intuitive experience'] },
+  { title: 'User satisfaction', help: ['Provide an intuitive experience'] },
   {
     title: 'Customer retention',
     help: ['Provide an experience adapted', 'to their true needs'],

@@ -9,6 +9,15 @@ import ButtonIcon from '~assets/svg/Button.svg'
 
 import style from './Welcome.style'
 
+const words = [
+  'seamless',
+  'immersive',
+  'magical',
+  'positive',
+  'unique',
+  'customized',
+]
+
 export default () => (
   <Section className={style.Welcome}>
     <Header className={style.header} />
@@ -24,7 +33,7 @@ export default () => (
           <br />
           truly{' '}
           <span className={style.adjective}>
-            <Prompt words={['seamless', 'immersive', 'magical']} />
+            <Prompt words={words} />
           </span>
           <br />
           user experiences
