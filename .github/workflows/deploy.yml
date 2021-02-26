@@ -25,3 +25,4 @@ jobs:
           FOLDER: public # The folder the action should deploy.
           CLEAN: true # Automatically remove deleted files from the deploy branch
           REPOSITORY_NAME: interaction-dynamics/interaction-dynamics.github.io
+          SSH_KEY: ${{ secrets.GH_PAGES_SECRET_KEY }}
