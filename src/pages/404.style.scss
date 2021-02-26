@@ -1,0 +1,62 @@
+@import '~styles/colors';
+@import '~styles/fonts';
+
+.center {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+  .title {
+    color: $secondary;
+
+    @extend .normal;
+
+    font-size: 2em;
+    line-height: 3rem;
+
+    @include only(sm) {
+      font-size: 3rem;
+      line-height: 4rem;
+    }
+    font-weight: 600;
+  }
+}
+
+.code {
+  color: '#8A6534';
+  padding: 4;
+  background-color: '#FFF4DB';
+  font-size: '1.25rem';
+  border-radius: 4;
+}
+
+.paragraph {
+  font-size: 1em;
+  line-height: 1.3rem;
+
+  @include only(sm) {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+  }
+}
+
+.button {
+  color: $background;
+  background: $secondary;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 0.3rem;
+
+  &:hover {
+    background: $secondary_hue1;
+  }
+
+  &:active {
+    background: $secondary_hue2;
+  }
+}

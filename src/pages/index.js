@@ -58,7 +58,7 @@ const socials = [
   {
     label: 'Medium',
     Icon: MediumIcon,
-    href: 'https://thibault-friedrich.medium.com/',
+    href: 'https://medium.com/interaction-dynamics',
   },
 ]
 
