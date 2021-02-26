@@ -5,7 +5,7 @@ import style from './Header.style'
 
 const links = [
   {
-    href: 'https://thibault-friedrich.medium.com/',
+    href: 'https://medium.com/interaction-dynamics',
     label: 'Blog',
   },
 ]
