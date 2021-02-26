@@ -6,7 +6,7 @@ module.exports = {
     description:
       '🚀 A cutting-edge design and development agency to build an seamless digital user experiences using state-of-the-art technologies',
   },
-  pathPrefix: `/website`,
+  // pathPrefix: `/website`,
   plugins: [
     {
       resolve: `gatsby-plugin-sass`,
