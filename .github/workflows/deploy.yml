@@ -24,4 +24,4 @@ jobs:
           BRANCH: master # The branch the action should deploy to.
           FOLDER: public # The folder the action should deploy.
           CLEAN: true # Automatically remove deleted files from the deploy branch
-          repository-name: interaction-dynamics/interaction-dynamics.github.io
+          REPOSITORY_NAME: interaction-dynamics/interaction-dynamics.github.io
