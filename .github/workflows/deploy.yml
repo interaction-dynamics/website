@@ -20,9 +20,8 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: master # The branch the action should deploy to.
-          FOLDER: public # The folder the action should deploy.
-          CLEAN: true # Automatically remove deleted files from the deploy branch
-          REPOSITORY_NAME: interaction-dynamics/interaction-dynamics.github.io
-          SSH_KEY: ${{ secrets.GH_PAGES_SECRET_KEY }}
+          branch: master # The branch the action should deploy to.
+          folder: public # The folder the action should deploy.
+          clean: true # Automatically remove deleted files from the deploy branch
+          repository-name: interaction-dynamics/interaction-dynamics.github.io
+          ssh-key: ${{ secrets.GH_PAGES_SECRET_KEY }}
