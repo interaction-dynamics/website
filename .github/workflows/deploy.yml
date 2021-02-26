@@ -16,7 +16,9 @@ jobs:
         run: |
           yarn
           yarn build:ci
-
+        env:
+          GTAG_TRACKING_ID: ${{ secrets.GTAG_TRACKING_ID }}
+          HOTJAR_ID: ${{ secrets.HOTJAR_ID }}
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with:

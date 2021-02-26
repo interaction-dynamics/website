@@ -21,7 +21,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
-        trackingIds: ['G-Q7S8TZPM5N'],
+        trackingIds: [process.env.GTAG_TRACKING_ID],
         // This object is used for configuration specific to this plugin
         pluginConfig: {
           // Puts tracking script in the head instead of the body
@@ -31,6 +31,14 @@ module.exports = {
           // Avoids sending pageview hits from custom paths
           exclude: ['/preview/**', '/do-not-track/me/too/'],
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        includeInDevelopment: true, // optional parameter to include script in development
+        id: process.env.HOTJAR_ID,
+        sv: 6,
       },
     },
     'gatsby-plugin-sharp',
