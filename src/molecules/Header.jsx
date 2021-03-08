@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
 
 import style from './Header.style'
 
@@ -13,6 +14,12 @@ const links = [
 const Header = ({ children, className }) => {
   return (
     <header className={`${style.Header} ${className}`}>
+      <div className={style.left}>
+        <Link to="/" className={style.title}>
+          Interaction
+          <br /> dynamics
+        </Link>
+      </div>
       {children}
       <div className={style.links}>
         {links.map(link => (
