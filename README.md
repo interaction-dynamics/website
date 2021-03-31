@@ -25,3 +25,6 @@ yarn start
 - [gatsby accessible on local network](https://github.com/gatsbyjs/gatsby/issues/5801)
 - [Lottie](https://www.npmjs.com/package/react-lottie)
 - https://lordicon.com/editor
+
+
+- [Oculus Quest 2 model](https://www.turbosquid.com/3d-models/oculus-quest-2-vr-model-1618815)
