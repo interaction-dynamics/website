@@ -1,0 +1,63 @@
+@import '~styles/colors';
+@import '~styles/fonts';
+@import '~styles/layouts';
+@import '~styles/responsive';
+@import '~styles/animations';
+
+.header {
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+
+  .background {
+    background-color: $secondary;
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .title {
+    position: relative;
+    z-index: 100;
+    color: $primary;
+    @extend .normal;
+    // font-variant: small-caps;
+    font-weight: 500;
+
+    @extend .animatedSlideUp;
+
+    font-size: 2em;
+    line-height: 3rem;
+    margin: 0;
+
+    @include only(sm) {
+      font-size: 3rem;
+      line-height: 4rem;
+    }
+  }
+
+  .subTitle {
+    position: relative;
+    z-index: 100;
+    color: $primary;
+    @extend .normal;
+    // font-variant: small-caps;
+    font-weight: 500;
+
+    @extend .animatedSlideUp;
+
+    font-size: 1.9em;
+    line-height: 2.8rem;
+
+    @include only(sm) {
+      font-size: 2.7rem;
+      line-height: 3.2rem;
+    }
+
+    padding-top: 1rem;
+    margin: 0;
+  }
+}

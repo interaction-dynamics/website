@@ -10,6 +10,10 @@ yarn start
 
 ## Links
 
+- [Icons](https://lordicon.com/)
+- https://neumorphism.io/#031224
+
+
 - [React animations](https://www.react-reveal.com/docs/)
 - [Magic scroll for react](https://www.npmjs.com/package/react-scrollmagic)
 - https://popmotion.io/

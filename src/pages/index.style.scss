@@ -4,85 +4,24 @@
 @import '~styles/fonts';
 @import '~styles/animations';
 
-p,
-.paragraph {
-  margin: 0;
-  padding: 0;
-}
-
-p + p,
-.paragraph + .paragraph {
-  padding-top: 4rem;
-}
-
 strong {
   @extend .strong;
 }
 
-.NewProduct {
-  @extend .Center;
+em {
+  @extend .em;
+}
 
+.NewProduct {
   // TODO add fireworks https://jsfiddle.net/elin/7m3bL/
 
   .icon {
     padding-top: 4rem;
-    // svg {
-    //   fill: $secondary;
-    //   width: 20rem;
-    //   cursor: pointer;
-    //   transition: linear 1s fill;
-
-    //   max-width: 50vw;
-
-    //   &:hover {
-    //     fill: $ternary;
-    //   }
-    // }
-  }
-}
-
-.Reasons {
-  @extend .Center;
-
-  .content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    @include only(xs) {
-      flex-wrap: wrap;
-    }
-
-    .reason {
-      flex: 1 1 auto;
-      text-align: center;
-    }
-
-    .icon {
-      flex: 1 1 auto;
-      padding: 0 2rem;
-      text-align: center;
-
-      color: $secondary;
-
-      font-size: 10rem;
-      line-height: 10.5rem;
-
-      @include only(sm) {
-        font-size: 15rem;
-        line-height: 16.5rem;
-      }
-    }
   }
 }
 
 .AdvancedInteractions,
 .Standout {
-  @extend .Center;
-
-  // min-height: 20vh;
-  // padding-top: 10rem;
-  // padding-bottom: 10rem;
   .icon {
     width: 100%;
     max-width: 22rem;
@@ -90,8 +29,6 @@ strong {
 }
 
 .Technologies {
-  @extend .Center;
-
   .content {
     display: flex;
 
@@ -143,12 +80,22 @@ strong {
       @include only(lg) {
         width: 50%;
       }
+
+      .more {
+        text-align: left;
+        padding-top: 1rem;
+
+        .moreAbout {
+          &:hover {
+            color: $secondary;
+          }
+        }
+      }
     }
   }
 }
 
 .Benefits {
-  @extend .Center;
   text-align: left;
 
   .content {
@@ -174,154 +121,153 @@ strong {
   }
 }
 
-.Challenges {
-  @extend .Center;
-}
-
-.Mission {
-  @extend .Center;
-  text-align: center;
+.Missions {
   background-color: $secondary;
-  min-height: 70vh;
+  padding-top: 15rem;
+  padding-bottom: 15rem;
 
-  .content {
-    @include only(lg) {
-      margin: auto;
-      max-width: 1000px;
-    }
-
-    .before,
-    .top,
-    .bottom {
-      color: $background;
-
-      font-size: 1.4rem;
-      line-height: 1.7rem;
-
-      @include only(sm) {
-        font-size: 1.7rem;
-        line-height: 2.2rem;
-      }
-    }
-
-    .middle {
-      color: $primary;
-
-      font-size: 2rem;
-      line-height: 2.5rem;
-
-      @include only(sm) {
-        font-size: 5rem;
-        line-height: 9.5rem;
-      }
-    }
-
-    .before {
-      @include only(lg) {
-        max-width: 30vw;
-        margin: auto;
-        margin-bottom: 10rem;
-      }
-
-      margin-bottom: 10rem;
-    }
-  }
-}
-
-.Contact {
-  @extend .Center;
-  text-align: center;
-  min-height: 80vh;
-
-  @include only(lg) {
-    text-align: left;
+  .before,
+  .top,
+  .bottom {
+    color: $background;
+    @extend .normal;
   }
 
-  .title {
-    text-align: center;
+  .middle {
+    color: $ternary;
+
     @extend .normal;
 
     font-size: 2rem;
     line-height: 2.5rem;
 
     @include only(sm) {
-      font-size: 4rem;
-      line-height: 5rem;
+      font-size: 5rem;
+      line-height: 9.5rem;
     }
   }
 
-  .help {
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-    text-align: center;
+  .before {
+    @include only(lg) {
+      max-width: 30vw;
+      margin: auto;
+      margin-bottom: 10rem;
+    }
 
+    margin-bottom: 10rem;
+  }
+
+  .title {
+    color: $background;
+
+    font-size: 2rem;
+    line-height: 2.3rem;
+
+    @include only(lg) {
+      font-size: 3.5rem;
+      line-height: 3.5rem;
+    }
+  }
+
+  .list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .mission {
+    flex: 1 1 30%;
+    max-width: 30rem;
+    margin: 2rem 0;
     @include only(sm) {
-      font-size: 1.7rem;
-      line-height: 2rem;
+      margin: 2rem 3rem;
     }
-  }
-
-  .link {
-    @extend .strong;
-  }
-
-  .feedback {
-    font-size: 1rem;
-  }
-
-  .socials {
-    padding: 4rem 0rem;
+    color: $background;
     display: flex;
     align-items: center;
-    justify-content: center;
-  }
-
-  .social {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-
-    border: none;
-    background-color: transparent;
-    outline: none;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-
-    color: $ternary;
-    margin: 0 2rem;
-
-    transition: color 0.3s linear;
-
-    &:hover {
-      color: $secondary;
-    }
+    flex-direction: column;
+    // font-size: 1.4rem;
+    // line-height: 1.7rem;
 
     .icon {
-      width: 3rem;
+      width: 10rem;
     }
 
-    .label {
+    .name {
+      color: $ternary;
+    }
+
+    .description {
+      color: $background;
       @extend .normal;
+    }
+  }
 
-      font-size: 0.8rem;
-      line-height: 1rem;
+  .more {
+    padding-top: 4rem;
 
-      @include only(sm) {
-        font-size: 1rem;
-        line-height: 1.3rem;
+    .moreAbout {
+      color: $ternary;
+
+      &:hover {
+        color: $background;
       }
-
-      color: currentColor;
     }
   }
 }
 
-.footer {
-  @extend .normal;
-  color: $secondary;
-  font-size: 1rem;
-  text-align: center;
+.second {
+  padding-top: 20rem;
+}
 
-  a {
-    color: $secondary;
+.GetInTouch {
+  min-height: 80vh;
+}
+
+.moreAbout {
+  @extend .normal;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+
+  text-decoration: none;
+
+  transition: color linear 0.2s;
+
+  font-size: 1.4rem;
+  line-height: 2rem;
+  @include only(lg) {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  .text {
+    padding-bottom: 0.25rem;
+    flex: 1 1 auto;
+  }
+
+  .moreAboutIcon {
+    flex: 2 2;
+    display: inline-block;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    @include only(lg) {
+      font-size: 2rem;
+      line-height: 2.2rem;
+    }
+
+    padding-right: 0.5rem;
+    padding-left: 0rem;
+    transition: padding-right linear 0.2s, padding-left linear 0.2s;
+  }
+
+  &:hover {
+    .moreAboutIcon {
+      padding-left: 0.5rem;
+      padding-right: 0rem;
+    }
   }
 }

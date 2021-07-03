@@ -1,0 +1,23 @@
+@import '~styles/colors';
+@import '~styles/layouts';
+@import '~styles/responsive';
+@import '~styles/fonts';
+@import '~styles/animations';
+
+.GoBackToParent {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+
+  @extend .animatedSlideLeft;
+
+  .button {
+    font-size: 1rem;
+    line-height: 1.2rem;
+
+    @include only(lg) {
+      font-size: 1.6rem;
+      line-height: 2rem;
+    }
+  }
+}

@@ -41,6 +41,7 @@ module.exports = {
         sv: 6,
       },
     },
+    `gatsby-plugin-image`,
     'gatsby-plugin-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
@@ -60,6 +61,14 @@ module.exports = {
         path: './src/images/',
       },
       __key: 'images',
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'videos',
+        path: './src/videos/',
+      },
+      __key: 'videos',
     },
     {
       resolve: 'gatsby-source-filesystem',

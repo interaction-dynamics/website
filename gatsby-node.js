@@ -19,6 +19,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         '~styles': path.resolve(__dirname, 'src/styles'),
         '~utils': path.resolve(__dirname, 'src/utils'),
         '~images': path.resolve(__dirname, 'src/images'),
+        '~videos': path.resolve(__dirname, 'src/videos'),
       },
       extensions: ['.js', '.jsx', '.json', '.scss', '.svg'],
     },

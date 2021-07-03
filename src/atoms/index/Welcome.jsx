@@ -20,7 +20,7 @@ const words = [
 
 export default () => (
   <Section className={style.Welcome}>
-    <Header className={style.header} />
+    <Header className={style.header} animated light />
     <div className={style.content}>
       <div className={style.left}>
         <div className={style.preTitle}>

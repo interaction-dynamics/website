@@ -3,13 +3,20 @@
 
 .Section {
   @extend .normal;
-  padding-bottom: 15rem;
-  padding-top: 15rem;
-
   position: relative;
 
-  // scroll-snap-align: start;
-  // scroll-snap-stop: normal;
-
   min-height: 50vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: $padding;
+
+  text-align: center;
+
+  &.short {
+    min-height: 0;
+    height: auto;
+  }
 }

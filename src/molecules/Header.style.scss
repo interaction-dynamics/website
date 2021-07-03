@@ -5,10 +5,12 @@
 @import '~styles/animations';
 
 .Header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+
+  width: 100%;
 
   display: flex;
   align-items: center;
@@ -23,12 +25,12 @@
     line-height: 2rem;
   }
 
-  padding-top: 4rem;
+  padding-top: 2rem;
   padding-left: $padding;
   padding-right: $padding;
 
   @include only(md) {
-    padding-top: 2 * $padding;
+    padding-top: $padding;
     padding-right: 4 * $padding;
     padding-left: 4 * $padding;
   }
@@ -40,8 +42,9 @@
 }
 
 .title {
+  position: relative;
+
   text-decoration: none;
-  color: $primary;
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 700;
@@ -55,49 +58,98 @@
   }
 
   transition: color 0.2s linear;
+  color: $primary;
   &:hover {
-    color: $secondary;
+    color: $background;
   }
 
-  animation-name: fadeInAnimation;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-delay: 0.6s;
-  opacity: 0;
-  animation-fill-mode: forwards;
+  &.light {
+    &:hover {
+      color: $secondary;
+    }
+  }
+
+  &.animated {
+    @extend .animatedFade;
+
+    animation-name: fadeInAnimation;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-delay: 0.6s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
 }
 
-.links {
+.nav {
   text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 
   @include only(xs) {
     display: none;
   }
 
-  animation-name: fadeInAnimation;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-delay: 1.2s;
-  opacity: 0;
-  animation-fill-mode: forwards;
+  &.animated {
+    .navLink {
+      @extend .animatedFade;
+    }
+  }
 }
 
-.link {
+.active {
+  &:after {
+    content: ' ';
+    display: inline-block;
+    $height: 3px;
+    height: $height;
+
+    transition: background 0.2s linear;
+
+    background: $primary;
+
+    position: absolute;
+    bottom: -$height;
+    left: 0;
+    right: 0;
+  }
+}
+
+.navLink {
   text-decoration: none;
-  color: $primary;
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1.5rem;
 
+  position: relative;
+
   @include only(md) {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     line-height: 1.8rem;
   }
 
   transition: color 0.2s linear;
+
+  color: $primary;
+
   &:hover {
-    color: $secondary;
+    color: $background;
+
+    &:after {
+      background: $background;
+    }
+  }
+
+  &.light {
+    &:hover {
+      color: $secondary;
+    }
+  }
+
+  & + & {
+    margin-left: 2.5rem;
   }
 }

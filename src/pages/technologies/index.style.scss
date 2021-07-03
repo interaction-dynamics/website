@@ -1,0 +1,60 @@
+@import '~styles/colors';
+@import '~styles/fonts';
+@import '~styles/layouts';
+@import '~styles/responsive';
+
+.header {
+  background-color: $secondary;
+}
+
+.main {
+  max-width: none;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+}
+
+.svg {
+  $width: 9rem;
+  height: $width;
+  width: $width;
+  position: relative;
+}
+
+.technology {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  $width: 15rem;
+  width: $width;
+  height: $width;
+  flex: 0 0 $width;
+  margin: 3rem;
+  padding: 1.5rem;
+
+  border-radius: 12px;
+  background: #031224;
+  box-shadow: 20px 20px 60px #010912, -20px -20px 60px #051b36;
+
+  text-decoration: none;
+
+  color: $secondary;
+  cursor: pointer;
+  font-size: 1.6rem;
+
+  transition: color linear 0.2s, box-shadow linear 0.2s;
+
+  &:hover {
+    color: $ternary;
+  }
+
+  &:active {
+    background: #031224;
+    box-shadow: inset 20px 20px 60px #010912, inset -20px -20px 60px #051b36;
+  }
+}

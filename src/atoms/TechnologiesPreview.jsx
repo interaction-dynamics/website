@@ -70,6 +70,8 @@ export default () => {
         index = 0
       }
     }, 5000)
+
+    return () => clearInterval(interval.current)
   }, [])
 
   return (

@@ -1,0 +1,92 @@
+@import '~styles/colors';
+@import '~styles/fonts';
+@import '~styles/layouts';
+@import '~styles/responsive';
+@import '~styles/animations';
+
+.main {
+  max-width: none;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+}
+
+.svg {
+  $width: 9rem;
+  height: $width;
+  width: $width;
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: $background;
+  opacity: 0.7;
+
+  transition: opacity linear 0.2s;
+}
+
+.title {
+  position: relative;
+  z-index: 100;
+  text-align: left;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 30rem;
+  height: 20rem;
+  flex: 1 1 30%;
+  margin: 1rem;
+  padding: 1.5rem;
+  position: relative;
+
+  border-radius: 12px;
+  background: #031224;
+  box-shadow: 20px 20px 60px #010912, -20px -20px 60px #051b36;
+
+  text-decoration: none;
+
+  font-size: 1.6rem;
+
+  transition: color linear 0.2s, box-shadow linear 0.2s;
+  color: $ternary;
+
+  &.animated {
+    @extend .animatedSlide;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &.allowed {
+    cursor: pointer;
+
+    &:hover {
+      color: $primary;
+
+      .background {
+        opacity: 0.5;
+      }
+    }
+
+    &:active {
+      background: #031224;
+      box-shadow: inset 20px 20px 60px #010912, inset -20px -20px 60px #051b36;
+    }
+  }
+}

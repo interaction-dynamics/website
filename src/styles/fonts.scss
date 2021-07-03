@@ -1,23 +1,23 @@
 @import '~styles/colors';
 @import '~styles/layouts';
 
-.title {
-  font-family: Jost, Arial, Helvetica, sans-serif;
+// .title {
+//   font-family: Jost, Arial, Helvetica, sans-serif;
 
-  font-weight: 200;
+//   font-weight: 200;
 
-  font-size: 2rem;
-  line-height: 2.7rem;
-  letter-spacing: 0.2rem;
+//   font-size: 2rem;
+//   line-height: 2.7rem;
+//   letter-spacing: 0.2rem;
 
-  @include only(lg) {
-    font-size: 3rem;
-    line-height: 3.4rem;
-    letter-spacing: 0.15rem;
-  }
+//   @include only(lg) {
+//     font-size: 3rem;
+//     line-height: 3.4rem;
+//     letter-spacing: 0.15rem;
+//   }
 
-  color: $primary;
-}
+//   color: $primary;
+// }
 
 .normal {
   font-family: Jost, Arial, Helvetica, sans-serif;
@@ -53,4 +53,21 @@
   font-weight: inherit;
   font-size: inherit;
   color: $secondary;
+}
+
+.link {
+  font-family: Jost, Arial, Helvetica, sans-serif;
+  font-weight: inherit;
+  font-size: inherit;
+  color: $ternary;
+
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.em {
+  color: $ternary;
 }

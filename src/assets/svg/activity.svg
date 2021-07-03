@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 3369 851">
+  <defs>
+    <clipPath id="clip-Words_1">
+      <rect width="3369" height="851"/>
+    </clipPath>
+  </defs>
+  <g id="Words_1" data-name="Words – 1" clip-path="url(#clip-Words_1)">
+    <g id="Component_5_1" data-name="Component 5 – 1" transform="translate(1949 363)">
+      <rect id="Rectangle_4" data-name="Rectangle 4" width="198" height="204" rx="10" fill="#1fc700"/>
+      <text id="Distance_estimation" data-name="Distance estimation" transform="translate(475 441)" fill="#1fc700" font-size="90" font-family="Jost-Semi, 'Jost\*'" letter-spacing="0.058em"><tspan x="0" y="0">Distance estimation</tspan></text>
+      <g id="Flowchart_Connector_-_Turn_-_Element" data-name="Flowchart Connector - Turn - Element" transform="translate(440.766 422) rotate(180)">
+        <path id="line_color_border_" data-name="line [color_border]" d="M389,100H731.6V294.39" transform="translate(-389 -100)" fill="none" stroke="#1fc700" stroke-width="20"/>
+      </g>
+    </g>
+    <g id="Component_4_1" data-name="Component 4 – 1" transform="translate(21 363)">
+      <rect id="Rectangle_2" data-name="Rectangle 2" width="486" height="204" rx="10" transform="translate(1415)" fill="#af0069"/>
+      <text id="Pose_recognition" data-name="Pose recognition" transform="translate(0 444)" fill="#af0069" font-size="90" font-family="Jost-Semi, 'Jost\*'" letter-spacing="0.058em"><tspan x="0" y="0">Pose recognition</tspan></text>
+      <g id="Flowchart_Connector_-_Turn_-_Element-2" data-name="Flowchart Connector - Turn - Element" transform="translate(1658 422) rotate(180)">
+        <path id="line_color_border_2" data-name="line [color_border]" d="M1253.536,100H389V294.39" transform="translate(-389 -100)" fill="none" stroke="#af0069" stroke-width="20"/>
+      </g>
+    </g>
+    <g id="Component_3_1" data-name="Component 3 – 1" transform="translate(308)">
+      <rect id="Rectangle_1" data-name="Rectangle 1" width="516" height="204" rx="10" transform="translate(406 363)" fill="#949cdf"/>
+      <rect id="Rectangle_3" data-name="Rectangle 3" width="335" height="204" rx="10" transform="translate(2155 363)" fill="#949cdf"/>
+      <text id="Object_detection" data-name="Object detection" transform="translate(0 96)" fill="#949cdf" font-size="90" font-family="Jost-Semi, 'Jost\*'" letter-spacing="0.058em"><tspan x="0" y="0">Object detection</tspan></text>
+      <g id="Flowchart_Connector_-_Turn_-_Element-3" data-name="Flowchart Connector - Turn - Element" transform="translate(785.248 71)">
+        <path id="line_color_border_3" data-name="line [color_border]" d="M389,100H1993.625V355.39" transform="translate(-389 -100)" fill="none" stroke="#949cdf" stroke-width="20"/>
+      </g>
+      <line id="Line_1" data-name="Line 1" y2="197" transform="translate(640.5 129.5)" fill="none" stroke="#949cdf" stroke-width="20"/>
+    </g>
+    <text id="A_human_is_sitting_on_the_sofa" data-name="A human is sitting on the sofa" transform="translate(573 511)" fill="#fff" font-size="150" font-family="Jost-Medium, 'Jost\*'" font-weight="500" letter-spacing="0.058em"><tspan x="0" y="0">A human is sitting on the sofa</tspan></text>
+  </g>
+</svg>

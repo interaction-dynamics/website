@@ -13,7 +13,11 @@ import style from './Layout.style'
 import './Layout.style.global'
 
 const Layout = ({ className, children }) => {
-  return <main className={`${style.Layout} ${className}`}>{children}</main>
+  return (
+    <div id="layout" className={`${style.Layout} ${className}`}>
+      {children}
+    </div>
+  )
 }
 
 Layout.defaultProps = {

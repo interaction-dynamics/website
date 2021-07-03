@@ -1,0 +1,54 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:06.714
+Interaction Dynamics - Recognize activity for home automation - June 2021 
+
+2
+00:00:06.715 --> 00:00:16.757
+The activity to recognize with machine learning: A human is sitting on the sofa. human, sofa : object detection. sitting: position recognition. on: distance estimation
+
+3
+00:00:16.957 --> 00:00:22.242
+With LUX-D Camera
+
+4
+00:00:22.442 --> 00:00:28.882
+LUX-D Camera: capture video, capture depth, run machine learning. Raspberry pi 4: run python code, initialize depthAI, stream video. Computer: access the video in browser.
+
+5
+00:00:29.082 --> 00:00:39.082
+Status: waiting for calibration
+
+6
+00:00:39.282 --> 00:00:44.971
+Detection: sofa, chair, human
+
+7
+00:00:45.171 --> 00:00:55.171
+Human standing
+
+8
+00:00:57.329 --> 00:01:05.979
+Human sitting not on sofa
+
+9
+00:01:10.629 --> 00:01:16.417
+Human standing
+
+10
+00:01:16.617 --> 00:01:39.095
+Human sitting on sofa
+
+11
+00:01:39.295 --> 00:01:48.286
+Human not in video
+
+12
+00:02:07.643 --> 00:02:09.719
+Human sitting on sofa
+
+13
+00:02:09.720 --> 00:02:19.720
+
+

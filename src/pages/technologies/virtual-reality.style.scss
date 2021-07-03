@@ -1,0 +1,74 @@
+@import '~styles/colors';
+@import '~styles/fonts';
+@import '~styles/layouts';
+@import '~styles/responsive';
+
+.header {
+  background-color: $secondary;
+}
+
+.technologies {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.useCases {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 5rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.useCase {
+  margin: 2rem;
+  flex: 0 0 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .icon {
+    $width: 8rem;
+    width: $width;
+    height: $width;
+  }
+
+  .title {
+    font-size: 1.2rem;
+    color: $secondary;
+    text-align: center;
+
+    @include only(sm) {
+      font-size: 1.7rem;
+    }
+  }
+}
+
+.more {
+  color: $ternary;
+}
+
+.bothWorlds {
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+}
+
+.worldCloud {
+  width: 90vw;
+
+  @include only(lg) {
+    width: 1000px;
+  }
+}
+
+.notabene {
+  color: $secondary;
+
+  a {
+    color: $ternary;
+    text-decoration: none;
+  }
+}

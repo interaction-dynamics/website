@@ -1,15 +1,16 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
 
 import style from './Center.style'
 
-const Left = ({ children }) => (
-  <div className={style.left}>
+const Left = ({ className = '', children }) => (
+  <div className={`${style.left} ${className}`}>
     <div className={style.centerLeft}>{children}</div>
   </div>
 )
 
-const Right = ({ children }) => (
-  <div className={style.right}>
+const Right = ({ className = '', children }) => (
+  <div className={`${style.right} ${className}`}>
     <div className={style.centerRight}>{children}</div>
   </div>
 )

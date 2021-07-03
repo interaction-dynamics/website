@@ -1,0 +1,88 @@
+@import '~styles/colors';
+@import '~styles/layouts';
+@import '~styles/responsive';
+@import '~styles/fonts';
+@import '~styles/animations';
+
+.Contact {
+  @include only(lg) {
+    text-align: left;
+  }
+
+  .title {
+    text-align: center;
+    @extend .normal;
+
+    font-size: 2rem;
+    line-height: 2.5rem;
+
+    @include only(sm) {
+      font-size: 4rem;
+      line-height: 5rem;
+    }
+  }
+
+  .help {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    text-align: center;
+
+    @include only(sm) {
+      font-size: 1.7rem;
+      line-height: 2rem;
+    }
+  }
+
+  .link {
+    @extend .strong;
+  }
+
+  .feedback {
+    font-size: 1rem;
+  }
+
+  .socials {
+    padding: 4rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .social {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+
+    color: $ternary;
+    margin: 0 2rem;
+
+    transition: color 0.3s linear;
+
+    &:hover {
+      color: $secondary;
+    }
+
+    .icon {
+      width: 3rem;
+    }
+
+    .label {
+      @extend .normal;
+
+      font-size: 0.8rem;
+      line-height: 1rem;
+
+      @include only(sm) {
+        font-size: 1rem;
+        line-height: 1.3rem;
+      }
+
+      color: currentColor;
+    }
+  }
+}

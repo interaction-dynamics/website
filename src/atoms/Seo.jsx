@@ -29,12 +29,16 @@ const SEO = ({ description, lang, meta, title }) => {
 
   const metaDescription = description || siteMetadata.description
 
+  const finalTitle = title
+    ? `${title} - ${siteMetadata.title}`
+    : siteMetadata.title
+
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title || siteMetadata.title}
+      title={finalTitle}
       titleTemplate={siteMetadata.title}
       meta={[
         {
@@ -70,7 +74,10 @@ const SEO = ({ description, lang, meta, title }) => {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <meta charSet="utf-8" />
+      <title>{finalTitle}</title>
+    </Helmet>
   )
 }
 

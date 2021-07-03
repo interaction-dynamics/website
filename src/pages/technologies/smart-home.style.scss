@@ -1,0 +1,181 @@
+@import '~styles/colors';
+@import '~styles/fonts';
+@import '~styles/layouts';
+@import '~styles/responsive';
+
+.header {
+  background-image: url('~images/background.jpeg');
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+}
+
+.background {
+  background-color: $secondary;
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.main {
+  max-width: 1000px;
+  margin: auto;
+  padding: $padding;
+
+  text-align: center;
+
+  // font-size: 1.6rem;
+
+  @extend .normal;
+
+  color: $primary;
+  // p + p {
+  //   margin-top: 0;
+  //   padding-top: 0;
+  // }
+}
+
+.Benefits {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+
+  .title {
+    margin: 0;
+    padding-bottom: 2rem;
+    @extend .normal;
+  }
+
+  .benefit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+
+    @include only(xs) {
+      flex-direction: column;
+    }
+
+    .image {
+      width: 150px;
+    }
+
+    .description {
+      padding-left: 1rem;
+      text-align: left;
+      width: 600px;
+
+      @include only(xs) {
+        text-align: center;
+        width: 100%;
+      }
+
+      font-size: 1rem;
+      line-height: 1.7rem;
+
+      @include only(sm) {
+        font-size: 1.2rem;
+        line-height: 2.2rem;
+      }
+
+      .name {
+        color: $secondary;
+        margin: 0;
+        padding-bottom: 0.5rem;
+
+        font-size: 1.5rem;
+
+        @include only(sm) {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
+
+.compare {
+  align-items: stretch;
+
+  .offers {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 4rem 0;
+  }
+
+  .offer {
+    text-align: center;
+    flex: 0 0 28rem;
+
+    @include only(xs) {
+      flex: 0 0 90vw;
+    }
+
+    padding: 2rem;
+    margin: 2rem;
+
+    border-radius: 12px;
+    background: #031224;
+    box-shadow: 20px 20px 60px #010912, -20px -20px 60px #051b36;
+
+    &.best {
+      border-radius: 12px;
+      background: linear-gradient(145deg, #031327, #031020);
+      box-shadow: 20px 20px 60px #010912, -20px -20px 60px #051b36;
+
+      background: $secondary;
+    }
+
+    .title {
+      @extend .normal;
+      padding-bottom: 2rem;
+    }
+
+    &:not(.best) {
+      .title {
+        text-decoration: line-through;
+      }
+    }
+
+    .option {
+      padding: 1rem 0;
+      font-size: 1.2rem;
+      line-height: 1.7rem;
+      position: relative;
+
+      @include only(sm) {
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+      }
+
+      color: $ternary;
+
+      &.bad {
+        color: $secondary;
+      }
+    }
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -15px;
+    width: 35px;
+    height: 35px;
+
+    @include only(xs) {
+      display: none;
+    }
+
+    path {
+      stroke-width: 40;
+      stroke-linecap: butt;
+    }
+  }
+}

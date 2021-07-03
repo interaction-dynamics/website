@@ -1,19 +1,25 @@
 import React from 'react'
+import Lottie from 'react-lottie'
 
+import { Link } from 'gatsby'
 import Layout from '~organisms/Layout'
 import Section from '~organisms/Section'
 import SEO from '~atoms/Seo'
 import TechnologiesPreview from '~atoms/TechnologiesPreview'
+import Main from '~organisms/Main'
 import Benefits from '~atoms/Benefits'
 import Welcome from '~atoms/index/Welcome'
 import BoxPackage from '~atoms/BoxPackage'
 import Center from '~molecules/Center'
+import Footer from '~atoms/Footer'
+import GetInTouch from '~atoms/GetInTouch'
+import Icon from '~atoms/Icon'
 
-import EmailIcon from '~assets/svg/socials/email.svg'
-import LinkedInIcon from '~assets/svg/socials/linkedin.svg'
-import MediumIcon from '~assets/svg/socials/medium.svg'
 import AdvancedIcon from '~assets/svg/advanced.svg'
 import Standout from '~assets/svg/standout.svg'
+import RocketSpace from '~assets/rocket-space-outline-edited'
+import VectorDesign from '~assets/117-vector-design-pen-outline-edited'
+import Consultation from '~assets/981-consultation-outline-edited'
 
 import style from './index.style'
 
@@ -45,22 +51,20 @@ const methods = [
   },
 ]
 
-const email = 'thibault.friedrich@gmail.com'
-const link = `mailto:${email}`
+// eslint-disable-next-line react/prop-types
+const LottieIcon = ({ icon }) => {
+  const defaultOptions = {
+    loop: false,
+    autoplay: false,
+    animationData: icon,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice',
+      className: style.svg,
+    },
+  }
 
-const socials = [
-  { label: 'Email', Icon: EmailIcon, href: link },
-  {
-    label: 'Linkedin',
-    Icon: LinkedInIcon,
-    href: 'https://www.linkedin.com/in/thibault-friedrich/',
-  },
-  {
-    label: 'Medium',
-    Icon: MediumIcon,
-    href: 'https://medium.com/interaction-dynamics',
-  },
-]
+  return <Lottie options={defaultOptions} className={style.svg} />
+}
 
 const IndexPage = () => {
   return (
@@ -102,6 +106,14 @@ const IndexPage = () => {
             <div className={style.centerLeft}>
               <strong>State-of-the-art</strong> technologies offer opportunities
               for customized, seamless and unique user experiences
+              <div className={style.more}>
+                <Link to="/technologies" className={style.moreAbout}>
+                  <span className={style.text}>More about technologies</span>
+                  <span className={style.moreAboutIcon}>
+                    <Icon src="angle-right" />
+                  </span>
+                </Link>
+              </div>
             </div>
           </div>
           <div className={style.right}>
@@ -117,58 +129,62 @@ const IndexPage = () => {
         </div>
       </Section>
       <Section className={style.Challenges}>
-        <div className={style.content}>
+        <Main>
           State-of-the-art technologies bring new <strong>challenges</strong> in
           terms of implementation and <strong>interactions</strong>. You need
           designers and developers trained in these technologies to fully take{' '}
           <strong>advantage</strong> of them.
-        </div>
+        </Main>
       </Section>
-      <Section className={style.Mission}>
-        <div className={style.content}>
-          <div className={style.top}>We are the expert team you need to</div>
+      <Section className={style.Missions}>
+        <Main>
+          <div className={style.top}>We are the R&D team you need to</div>
           <div className={style.middle}>Design & Build</div>
-          <div className={style.bottom}>a great digital solution</div>
-        </div>
-      </Section>
-      <Section className={style.Contact}>
-        <div className={style.content}>
-          <h3 className={style.title}>Get in touch</h3>
-          <p className={style.help}>
-            You have a new challenge for us? You want to be part of the team?
-            Please contact us.
-          </p>
-          <div className={style.socials}>
-            {socials.map(({ label, Icon, href }) => (
-              <a
-                key={label}
-                className={style.social}
-                target="_blank"
-                href={href}
-                rel="noreferrer"
-              >
-                <Icon className={style.icon} />
-                <div className={style.label}>{label}</div>
-              </a>
-            ))}
+          <div className={style.bottom}>a great user experience</div>
+        </Main>
+        <div className={style.second}>
+          <div className={style.title}>Our Mission</div>
+          <div className={style.list}>
+            <div className={style.mission}>
+              <div className={style.icon}>
+                <LottieIcon icon={RocketSpace} />
+              </div>
+              <div className={style.name}>Design & build </div>
+              <div className={style.description}>
+                digital and innovative solutions ready for production
+              </div>
+            </div>
+            <div className={style.mission}>
+              <div className={style.icon}>
+                <LottieIcon icon={VectorDesign} />
+              </div>
+              <div className={style.name}>Prototype proof-of-concepts</div>
+              <div className={style.description}>
+                based on short iterations to help you make the good choice
+              </div>
+            </div>
+            <div className={style.mission}>
+              <div className={style.icon}>
+                <LottieIcon icon={Consultation} />
+              </div>
+              <div className={style.name}>Train your team</div>
+              <div className={style.description}>
+                about state-of-the art technologies and methodologies
+              </div>
+            </div>
+          </div>
+          <div className={style.more}>
+            <Link to="/mission" className={style.moreAbout}>
+              <div className={style.text}>More about our mission</div>
+              <span className={style.moreAboutIcon}>
+                <Icon src="angle-right" />
+              </span>
+            </Link>
           </div>
         </div>
       </Section>
-      <footer className={style.footer}>
-        <div>
-          Icons made by{' '}
-          <a
-            href="https://www.flaticon.com/authors/pixelmeetup"
-            title="Pixelmeetup"
-          >
-            Pixelmeetup
-          </a>{' '}
-          from{' '}
-          <a href="https://www.flaticon.com/" title="Flaticon">
-            www.flaticon.com
-          </a>
-        </div>
-      </footer>
+      <GetInTouch className={style.GetInTouch} />
+      <Footer />
     </Layout>
   )
 }

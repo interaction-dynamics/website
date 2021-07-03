@@ -1,0 +1,13 @@
+@import '~styles/colors';
+@import '~styles/fonts';
+@import '~styles/layouts';
+@import '~styles/responsive';
+
+.tags {
+  color: $ternary;
+  padding: 4rem;
+}
+
+.tag {
+  padding: 0 0.5rem;
+}

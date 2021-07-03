@@ -1,0 +1,16 @@
+@import '~styles/colors';
+@import '~styles/layouts';
+@import '~styles/responsive';
+@import '~styles/fonts';
+@import '~styles/animations';
+
+.footer {
+  @extend .normal;
+  color: $secondary;
+  font-size: 1rem;
+  text-align: center;
+
+  a {
+    color: $secondary;
+  }
+}

@@ -1,0 +1,43 @@
+@import '~styles/colors';
+@import '~styles/layouts';
+@import '~styles/responsive';
+@import '~styles/fonts';
+@import '~styles/animations';
+
+.Section {
+  align-items: stretch;
+
+  @include only(lg) {
+    text-align: left;
+  }
+
+  .title {
+    text-align: center;
+    @extend .normal;
+    padding: 0;
+    margin: 0;
+
+    color: $secondary;
+    text-align: left;
+
+    font-size: 2rem;
+    line-height: 2.5rem;
+
+    @include only(sm) {
+      font-size: 4rem;
+      line-height: 5rem;
+    }
+  }
+
+  .content {
+    @extend .normal;
+
+    font-size: 1.2rem;
+    line-height: 2rem;
+
+    @include only(lg) {
+      font-size: 1.7rem;
+      line-height: 2.6rem;
+    }
+  }
+}

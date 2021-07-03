@@ -60,6 +60,7 @@ module.exports = {
           ['~styles', './src/styles'],
           ['~utils', './src/utils'],
           ['~images', './src/images'],
+          ['~videos', './src/videos'],
         ],
         extensions: ['.ts', '.js', '.jsx', '.json', '.scss', '.svg'],
       },
