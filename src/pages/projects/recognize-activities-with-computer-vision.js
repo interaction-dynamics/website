@@ -20,7 +20,7 @@ import Header from '~molecules/Header'
 import Tags from '~molecules/Tags'
 import luxDCamera from '~images/lux-d-camera.png'
 import video from '~videos/recognize-activity-3.mp4'
-import Activity from '~assets/svg/activity.svg'
+import Activity from '~assets/svg/activity3.svg'
 import Camera from '~assets/svg/camera.svg'
 
 import style from './recognize-activities-with-computer-vision.style'
