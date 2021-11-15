@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Design & Build with state-of-the-art technologies',
-    siteUrl: 'https://friedrith.github.io/website',
+    siteUrl: 'https://interaction-dynamics.github.io/',
     author: 'Thibault Friedrich',
     description:
       '🚀 A cutting-edge design and development agency to build an seamless digital user experiences using state-of-the-art technologies',
