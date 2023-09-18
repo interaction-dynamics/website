@@ -8,6 +8,9 @@ First, run the development server:
 
 ```bash
 pnpm dev
+
+# before commiting
+npx simple-git-hooks
 ```
 
 ## Deployment
