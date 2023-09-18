@@ -9,7 +9,7 @@ permissions:
   contents: read
   id-token: write
 jobs:
-  validate:
+  build:
     name: Validate Code
     runs-on: ubuntu-latest
     steps:
@@ -43,6 +43,33 @@ jobs:
           pnpm format
       - name: Unit Tests ✔️
         run: pnpm test:ci
+
+  e2e_tests:
+    name: e2e Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          version: 8
+          run_install: false
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+      - name: Install 🔧
+        run: pnpm install
       - name: e2e Tests ✔️
         run: |
           npx playwright install --with-deps
