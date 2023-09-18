@@ -7,6 +7,9 @@
 ```shell
 pnpm install
 pnpm dev
+
+# before commiting
+npx simple-git-hooks
 ```
 
 ## Deployment
