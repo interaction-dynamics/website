@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Valide Code
 on:
   push:
     branches: [master]
@@ -9,7 +9,8 @@ permissions:
   contents: read
   id-token: write
 jobs:
-  build:
+  validate:
+    name: Validate Code
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
