@@ -7,6 +7,8 @@ A boilerplate for [Next.js](https://nextjs.org/)
 First, run the development server:
 
 ```bash
+pnpm install
+
 pnpm dev
 
 # before commiting
