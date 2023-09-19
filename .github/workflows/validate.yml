@@ -70,6 +70,8 @@ jobs:
             ${{ runner.os }}-pnpm-store-
       - name: Install 🔧
         run: pnpm install
+      - name: Build 🔧
+        run: pnpm build
       - name: e2e Tests ✔️
         run: |
           npx playwright install --with-deps
