@@ -10,7 +10,7 @@ const baseURL = `http://localhost:${PORT}`
 // Reference: https://playwright.dev/docs/test-configuration
 export default defineConfig({
   // Timeout per test
-  timeout: 30 * 1000 * 10,
+  timeout: 30 * 1000,
   // Test directory
   testDir: path.join(__dirname, 'e2e'),
   // If a test fails, retry it additional 2 times
@@ -21,7 +21,7 @@ export default defineConfig({
   // Run your local dev server before starting the tests:
   // https://playwright.dev/docs/test-advanced#launching-a-development-web-server-during-the-tests
   webServer: {
-    command: 'npm run dev',
+    command: 'pnpm dev',
     url: baseURL,
     timeout: 120 * 1000,
     reuseExistingServer: !process.env.CI,
@@ -49,18 +49,18 @@ export default defineConfig({
         ...devices['Desktop Chrome'],
       },
     },
-    // {
-    //   name: 'Desktop Firefox',
-    //   use: {
-    //     ...devices['Desktop Firefox'],
-    //   },
-    // },
-    // {
-    //   name: 'Desktop Safari',
-    //   use: {
-    //     ...devices['Desktop Safari'],
-    //   },
-    // },
+    {
+      name: 'Desktop Firefox',
+      use: {
+        ...devices['Desktop Firefox'],
+      },
+    },
+    {
+      name: 'Desktop Safari',
+      use: {
+        ...devices['Desktop Safari'],
+      },
+    },
     // Test against mobile viewports.
     {
       name: 'Mobile Chrome',
@@ -68,9 +68,9 @@ export default defineConfig({
         ...devices['Pixel 5'],
       },
     },
-    {
-      name: 'Mobile Safari',
-      use: devices['iPhone 12'],
-    },
+    // {
+    //   name: 'Mobile Safari',
+    //   use: devices['iPhone 12'],
+    // },
   ],
 })
