@@ -138,7 +138,7 @@ const RecognizeActivitiesWithComputerVision = () => (
             Read the article
           </Button>
           <Button
-            href="https://github.com/interaction-dynamics/smart-home-with-luxonis"
+            href="https://github.com/interaction-dynamics/labs-smart-home-with-luxonis"
             className={style.button}
           >
             Access the code
