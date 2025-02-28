@@ -1,4 +1,3 @@
-import { NextIntlClientProvider } from 'next-intl'
 import Page from '../page'
 import { render, screen } from '@testing-library/react'
 import Link from 'next/link'
@@ -27,7 +26,7 @@ jest.mock(
 
 describe('Page', () => {
   it('should render a deployment description', () => {
-    render(<Page params={{ locale: 'en' }} />)
+    render(<Page />)
 
     expect(
       screen.getByText(

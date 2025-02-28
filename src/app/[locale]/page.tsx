@@ -1,19 +1,16 @@
 import Image from 'next/image'
-import { useTranslations } from 'next-intl'
-import LanguageSwitcher from './LanguageSwitcher'
+import { useLocale, useTranslations } from 'next-intl'
+import LanguageSwitcher from '../../components/LanguageSwitcher'
 
-export interface IndexProps {
-  params: {
-    locale: string
-  }
-}
+export interface IndexProps {}
 
-export default function Index({ params }: IndexProps) {
+export default function Index(_props: IndexProps) {
   const t = useTranslations('Index')
+  const locale = useLocale()
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <LanguageSwitcher locale={params.locale} />
+      <LanguageSwitcher locale={locale} />
       <h1>{t('title')}</h1>
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
