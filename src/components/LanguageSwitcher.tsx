@@ -1,18 +1,32 @@
 'use client'
-import Link from 'next-intl/link'
-import { usePathname } from 'next-intl/client'
+import React, { useTransition } from 'react'
+import { useSearchParams } from 'next/navigation'
+import { Locale, usePathname, useRouter } from '../i18n/routing'
 
 export interface LanguageSwitcherProps {
   locale: string
 }
 
 export default function LanguageSwitcher({ locale }: LanguageSwitcherProps) {
+  const router = useRouter()
+  const [isPending, startTransition] = useTransition()
   const pathname = usePathname()
+  const searchParams = useSearchParams()
+
+  function onChange(value: string) {
+    const nextLocale = value as Locale
+
+    startTransition(() => {
+      router.replace(`${pathname}?${new URLSearchParams(searchParams)}`, {
+        locale: nextLocale,
+      })
+      router.refresh()
+    })
+  }
 
   return (
-    <Link
-      href={pathname}
-      locale={locale === 'en' ? 'fr' : 'en'}
+    <button
+      onClick={() => onChange(locale === 'en' ? 'fr' : 'en')}
       className="fixed top-10 right-10 cursor-pointer text-gray-400 transition-colors hover:text-white flex flex-col items-center"
     >
       <svg
@@ -30,6 +44,6 @@ export default function LanguageSwitcher({ locale }: LanguageSwitcherProps) {
         />
       </svg>
       {locale}
-    </Link>
+    </button>
   )
 }

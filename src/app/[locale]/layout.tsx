@@ -1,12 +1,21 @@
-import { useLocale } from 'next-intl'
 import { notFound } from 'next/navigation'
+import { Geist, Geist_Mono } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
+import { getMessages } from 'next-intl/server'
+import { routing } from '@/i18n/routing'
 
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const geistSans = Geist({
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
+})
+
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -22,26 +31,23 @@ export interface LocaleLayoutProps {
 
 export default async function LocaleLayout({
   children,
-  params,
+  params: { locale },
 }: LocaleLayoutProps) {
-  const locale = useLocale()
-
-  // Validate that the incoming `locale` parameter is a valid locale
-  if (params.locale !== locale) {
+  // Ensure that the incoming `locale` is valid
+  if (!routing.locales.includes(locale as any)) {
     notFound()
   }
 
-  let messages
-  try {
-    messages = (await import(`../../messages/${locale}.json`)).default
-  } catch (error) {
-    notFound()
-  }
+  // Providing all messages to the client
+  // side is the easiest way to get started
+  const messages = await getMessages(locale)
 
   return (
     <html lang={locale}>
-      <body>
-        <NextIntlClientProvider locale={locale} messages={messages}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
       </body>

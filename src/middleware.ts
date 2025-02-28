@@ -1,15 +1,21 @@
-import createMiddleware from 'next-intl/middleware'
-
-export default createMiddleware({
-  // A list of all locales that are supported
-  locales: ['en', 'fr'],
-
-  // If this locale is matched, pathnames work without a prefix (e.g. `/about`)
-  defaultLocale: 'en',
-})
-
+// middleware.ts
+import createMiddleware from "next-intl/middleware";
+import { routing } from "./i18n/routing";
+ 
+export default createMiddleware(routing);
+ 
 export const config = {
-  // Skip all paths that should not be internationalized. This example skips the
-  // folders "api", "_next" and all files with an extension (e.g. favicon.ico)
-  matcher: ['/((?!api|_next|.*\\..*).*)'],
-}
+  matcher: [
+    // Enable a redirect to a matching locale at the root
+    "/",
+ 
+    // Set a cookie to remember the previous locale for
+    // all requests that have a locale prefix
+    "/(ne|en)/:path*",
+ 
+    // Enable redirects that add missing locales
+    // (e.g. `/pathnames` -> `/en/pathnames`)
+    "/((?!_next|_vercel|.*\\..*).*)",
+  ],
+};
+ 
