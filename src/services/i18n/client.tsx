@@ -2,6 +2,7 @@
 import { createContext, useContext, useMemo } from 'react'
 import { Messages } from './types'
 import { findTranslation } from './private/findTranslation'
+import { defaultNamespace } from './config'
 
 interface TranslationContextType {
   locale: string
@@ -33,7 +34,6 @@ export function TranslationProvider({
   locale,
   messages,
   children,
-  defaultNamespace,
 }: TranslationProviderProps) {
   const value = useMemo(
     () => ({
