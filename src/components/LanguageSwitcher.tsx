@@ -1,5 +1,5 @@
 'use client'
-import { changeLocale } from '@/i18n/translations'
+import { changeLocale } from '@/services/i18n/server'
 import React from 'react'
 
 export interface LanguageSwitcherProps {

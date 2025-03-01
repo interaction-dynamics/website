@@ -10,7 +10,7 @@ import {
   namespaces,
   NEXT_LOCALE,
 } from './config'
-import { findTranslation } from './findTranslation'
+import { findTranslation } from './private/findTranslation'
 
 export async function getLocale() {
   const cookieStore = await cookies()
