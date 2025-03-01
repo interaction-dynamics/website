@@ -1,3 +1,4 @@
+'use server'
 import Image from 'next/image'
 import LanguageSwitcher from '../components/LanguageSwitcher'
 import { getTranslation } from '@/i18n/translations'

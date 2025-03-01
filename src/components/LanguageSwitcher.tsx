@@ -6,6 +6,8 @@ export interface LanguageSwitcherProps {
   locale: string
 }
 
+export const languageSwitcherTestId = 'language-switcher'
+
 export default function LanguageSwitcher({ locale }: LanguageSwitcherProps) {
   const onToggleLocale = async () => {
     const newLocale = locale === 'en' ? 'fr' : 'en'
@@ -15,8 +17,11 @@ export default function LanguageSwitcher({ locale }: LanguageSwitcherProps) {
   return (
     <button
       onClick={onToggleLocale}
+      data-testid={languageSwitcherTestId}
+      aria-label="Change language"
       className="fixed top-10 right-10 cursor-pointer text-gray-400 transition-colors hover:text-white flex flex-col items-center"
     >
+      <div className="sr-only">Change language</div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
