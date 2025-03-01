@@ -31,6 +31,8 @@ export async function getLocale() {
 
   const languages = new Negotiator({ headers: allHeaders }).languages()
 
+  console.log('allHeaders', languages, locales, defaultLocale)
+
   return match(languages, locales, defaultLocale)
 }
 
@@ -52,8 +54,6 @@ export async function getMessages(locale: string) {
 export async function getTranslation(namespace?: string) {
   const locale = await getLocale()
   const messages = await getMessages(locale)
-
-  console.log('messages', messages)
 
   return {
     locale,
