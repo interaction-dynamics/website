@@ -31,9 +31,11 @@ export async function getLocale() {
 
   const languages = new Negotiator({ headers: allHeaders }).languages()
 
-  console.log('allHeaders', languages, locales, defaultLocale)
-
-  return match(languages, locales, defaultLocale)
+  try {
+    return match(languages, locales, defaultLocale)
+  } catch {
+    return defaultLocale
+  }
 }
 
 export async function changeLocale(locale: string) {
