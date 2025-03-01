@@ -1,32 +1,20 @@
 'use client'
-import React, { useTransition } from 'react'
-import { useSearchParams } from 'next/navigation'
-import { Locale, usePathname, useRouter } from '../i18n/routing'
+import { changeLocale } from '@/i18n/translations'
+import React from 'react'
 
 export interface LanguageSwitcherProps {
   locale: string
 }
 
 export default function LanguageSwitcher({ locale }: LanguageSwitcherProps) {
-  const router = useRouter()
-  const [isPending, startTransition] = useTransition()
-  const pathname = usePathname()
-  const searchParams = useSearchParams()
-
-  function onChange(value: string) {
-    const nextLocale = value as Locale
-
-    startTransition(() => {
-      router.replace(`${pathname}?${new URLSearchParams(searchParams)}`, {
-        locale: nextLocale,
-      })
-      router.refresh()
-    })
+  const onToggleLocale = async () => {
+    const newLocale = locale === 'en' ? 'fr' : 'en'
+    await changeLocale(newLocale)
   }
 
   return (
     <button
-      onClick={() => onChange(locale === 'en' ? 'fr' : 'en')}
+      onClick={onToggleLocale}
       className="fixed top-10 right-10 cursor-pointer text-gray-400 transition-colors hover:text-white flex flex-col items-center"
     >
       <svg

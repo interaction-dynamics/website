@@ -1,4 +1,4 @@
-import Page from '../page'
+import Page from '../[locale]/page'
 import { render, screen } from '@testing-library/react'
 import Link from 'next/link'
 
