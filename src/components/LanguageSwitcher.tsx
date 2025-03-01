@@ -19,7 +19,7 @@ export default function LanguageSwitcher({ locale }: LanguageSwitcherProps) {
       onClick={onToggleLocale}
       data-testid={languageSwitcherTestId}
       aria-label="Change language"
-      className="fixed top-10 right-10 cursor-pointer text-gray-400 transition-colors hover:text-white flex flex-col items-center"
+      className="fixed top-10 right-10 cursor-pointer text-gray-500 transition-colors hover:text-white flex flex-col items-center"
     >
       <div className="sr-only">Change language</div>
       <svg
