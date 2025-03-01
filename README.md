@@ -15,6 +15,15 @@ pnpm dev
 npx simple-git-hooks
 ```
 
+## Initialization
+
+If you want to use this boilerplate as a base for your project, you can run the following command:
+
+```bash
+# to generate custom contributing guidelines, code of conduct, and pull request template
+npx contributing-generator
+```
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
