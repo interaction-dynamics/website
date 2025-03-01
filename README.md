@@ -24,6 +24,8 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 ## Ackowledgements
 
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
 - React
 - [Next.js](https://nextjs.org/)
 - Tailwind
@@ -36,7 +38,6 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 - Commitlint
 - Github Actions
 - [Next-intl](https://next-intl-docs.vercel.app/)
+- Custom Translation system
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-> > > > > > > 1de6c9b (chore: initialize next.js)
