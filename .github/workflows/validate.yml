@@ -45,7 +45,7 @@ jobs:
         run: pnpm test:ci
 
   e2e_tests:
-    name: e2e Tests
+    name: End-to-end Tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -72,7 +72,7 @@ jobs:
         run: pnpm install
       - name: Build 🔧
         run: pnpm build
-      - name: e2e Tests ✔️
+      - name: End-to-end Tests ✔️
         run: |
           npx playwright install --with-deps
           pnpm test:e2e
