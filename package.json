@@ -11,7 +11,8 @@
     "test": "jest --watch",
     "test:ci": "jest --ci",
     "test:e2e": "playwright test",
-    "commitlint": "commitlint --from=HEAD~1"
+    "commitlint": "commitlint --from=HEAD~1",
+    "postinstall": "npx simple-git-hooks"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.6.0",

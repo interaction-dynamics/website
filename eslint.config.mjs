@@ -1,19 +1,18 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
-import jsxA11y from 'eslint-plugin-jsx-a11y';
-import pluginJest from 'eslint-plugin-jest';
+import { dirname } from 'path'
+import { fileURLToPath } from 'url'
+import { FlatCompat } from '@eslint/eslintrc'
+import jsxA11y from 'eslint-plugin-jsx-a11y'
+import pluginJest from 'eslint-plugin-jest'
 
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 const compat = new FlatCompat({
   baseDirectory: __dirname,
-});
+})
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  ...compat.extends('next/core-web-vitals', 'next/typescript'),
   {
     files: ['**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}'],
     plugins: {
@@ -46,6 +45,6 @@ const eslintConfig = [
       'jest/valid-expect': 'error',
     },
   },
-];
+]
 
-export default eslintConfig;
+export default eslintConfig
