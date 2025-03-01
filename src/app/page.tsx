@@ -1,7 +1,7 @@
 'use server'
 import Image from 'next/image'
 import LanguageSwitcher from '../components/LanguageSwitcher'
-import { getTranslation } from '@/i18n/translations'
+import { getTranslation } from '@/services/i18n/server'
 
 export default async function Index() {
   const { t, locale } = await getTranslation()

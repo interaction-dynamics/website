@@ -1,8 +1,7 @@
 'use client'
 import { createContext, useContext, useMemo } from 'react'
-import { defaultNamespace } from './config'
 import { Messages } from './types'
-import { findTranslation } from './findTranslation'
+import { findTranslation } from './private/findTranslation'
 
 interface TranslationContextType {
   locale: string
@@ -17,9 +16,10 @@ const TranslationContext = createContext<TranslationContextType>({
 interface TranslationProviderProps extends React.PropsWithChildren {
   locale: string
   messages: Messages
+  defaultNamespace: string
 }
 
-export function useTranslations(namespace: string = defaultNamespace) {
+export function useTranslations(namespace?: string) {
   const { locale, t } = useContext(TranslationContext)
 
   return {
@@ -33,12 +33,13 @@ export function TranslationProvider({
   locale,
   messages,
   children,
+  defaultNamespace,
 }: TranslationProviderProps) {
   const value = useMemo(
     () => ({
       locale,
-      t: (key: string, namespace: string = 'global') => {
-        return findTranslation(key, messages[namespace])
+      t: (key: string, namespace?: string) => {
+        return findTranslation(key, messages[namespace ?? defaultNamespace])
       },
     }),
     [messages, locale]
