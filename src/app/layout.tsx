@@ -2,8 +2,8 @@ import { Geist, Geist_Mono } from 'next/font/google'
 
 import './globals.css'
 import type { Metadata } from 'next'
-import { getLocale, getMessages } from '@/services/i18n/server'
-import { TranslationProvider } from '@/services/i18n'
+import { getLocale, getMessages, TranslationProvider } from '@/services/i18n'
+import { AnalyticsScript } from '@/services/analytics'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -29,9 +29,13 @@ export default async function LocaleLayout({ children }: LocaleLayoutProps) {
   const messages = await getMessages(locale)
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className="dark">
+      <head>
+        <AnalyticsScript />
+        <meta name="color-scheme" content="dark" />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
         <TranslationProvider
           locale={locale}
