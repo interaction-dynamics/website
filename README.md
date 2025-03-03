@@ -15,14 +15,7 @@ pnpm dev
 npx simple-git-hooks
 ```
 
-## Initialization
-
-If you want to use this boilerplate as a base for your project, you can run the following command:
-
-```bash
-# to generate custom contributing guidelines, code of conduct, and pull request template
-npx contributing-generator
-```
+> If you want to use this boilerplate as a base for your project, you should also follow the steps in the [GETTING_STARTED.md](./GETTING_STARTED.md).
 
 ## License
 
