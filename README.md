@@ -41,3 +41,5 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Commitlint
 - Github Actions
 - Custom Translation system
+- Simple Git Hooks
+- [shadcn/ui](https://ui.shadcn.com/)
