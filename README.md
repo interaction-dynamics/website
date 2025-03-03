@@ -41,5 +41,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Github Actions
 - [Next-intl](https://next-intl-docs.vercel.app/)
 - Custom Translation system
+- Simple Git Hooks
+- [shadcn/ui](https://ui.shadcn.com/)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
