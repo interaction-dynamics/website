@@ -58,6 +58,7 @@
     "typescript": "5.2.2"
   },
   "simple-git-hooks": {
+    "pre-commit": "pnpm format && pnpm lint && pnpm test:ci",
     "pre-push": "pnpm commitlint"
   }
 }

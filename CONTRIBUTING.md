@@ -78,6 +78,12 @@ These are the authorized types:
 If you add a feature or fix a bug, you need to provide a test verifying your
 improvement. You can launch tests using `yarn test`.
 
+## Git hooks
+
+Few git hooks are installed to help you to respect the coding rules. You can find them in the package.json in the property "simple-git-hooks".
+
+Every time you set up a new hook, you should run the command `npx simple-git-hooks`.
+
 ## Versioning
 
 This project use [standard-version](https://github.com/conventional-changelog/standard-version) to handle versioning
