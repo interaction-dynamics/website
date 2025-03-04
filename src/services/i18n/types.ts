@@ -7,3 +7,8 @@ export interface Translations {
 export interface Messages {
   [key: (typeof namespaces)[number]]: Translations
 }
+
+export interface Language {
+  label: string
+  locale: string
+}
