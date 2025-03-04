@@ -3,7 +3,7 @@ import { ThemeProvider } from '@/components/theme-provider'
 
 import './globals.css'
 import type { Metadata } from 'next'
-import { getLocale, getMessages, TranslationProvider } from '@/services/i18n'
+import { getLocale, TranslationProvider } from '@/services/i18n'
 import { AnalyticsScript } from '@/services/analytics'
 
 const geistSans = Geist({

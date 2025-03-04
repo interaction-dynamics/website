@@ -5,7 +5,6 @@ import { Globe } from 'lucide-react'
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuItem,
   DropdownMenuTrigger,
   DropdownMenuCheckboxItem,
 } from '@/components/ui/dropdown-menu'
@@ -19,11 +18,6 @@ export const languageSwitcherTestId = 'language-switcher'
 
 export function LanguageSelector() {
   const { locale, changeLocale, languages } = useTranslations()
-
-  const onToggleLocale = async () => {
-    const newLocale = locale === 'en' ? 'fr' : 'en'
-    await changeLocale(newLocale)
-  }
 
   return (
     <DropdownMenu>
