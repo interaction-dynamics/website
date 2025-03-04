@@ -83,4 +83,8 @@ improvement. You can launch tests using `yarn test`.
 This project use [standard-version](https://github.com/conventional-changelog/standard-version) to handle versioning
 automatically.
 
+## Architecture decisions
+
+This project uses [ADR](https://adr.github.io/) to document architecture decisions. When you take an archiveture decision, you can copy the template `docs/decisions/0000-madr-template.md` to `docs/decisions/<number>-my-decision.md` and fill it with your decision.
+
 **May the force be with you !!**
