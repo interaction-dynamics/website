@@ -50,7 +50,7 @@ export function TranslationProviderClient({
         return findTranslation(key, messages[namespace ?? defaultNamespace])
       },
     }),
-    [messages, locale]
+    [messages, locale, languages]
   )
 
   return <TranslationContext value={value}>{children}</TranslationContext>

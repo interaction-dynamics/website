@@ -43,5 +43,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Custom Translation system
 - Simple Git Hooks
 - [shadcn/ui](https://ui.shadcn.com/)
+- Dark mode toggle
+- Language selector
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
