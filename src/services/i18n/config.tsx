@@ -1,4 +1,9 @@
-export const locales = ['en', 'fr']
+import { Language } from './types'
+
+export const languages: Language[] = [
+  { label: 'English', locale: 'en' },
+  { label: 'Français', locale: 'fr' },
+]
 
 export const namespaces = ['common']
 

@@ -6,11 +6,16 @@ import Negotiator from 'negotiator'
 import {
   defaultLocale,
   defaultNamespace,
-  locales,
+  languages,
   namespaces,
   NEXT_LOCALE,
 } from './config'
 import { findTranslation } from './private/findTranslation'
+import { TranslationProviderClient } from './client'
+
+export async function getLanguages() {
+  return languages
+}
 
 export async function getLocale() {
   const cookieStore = await cookies()
@@ -29,10 +34,12 @@ export async function getLocale() {
     {}
   )
 
-  const languages = new Negotiator({ headers: allHeaders }).languages()
+  const browerLanguages = new Negotiator({ headers: allHeaders }).languages()
+
+  const locales = languages.map((l) => l.locale)
 
   try {
-    return match(languages, locales, defaultLocale)
+    return match(browerLanguages, locales, defaultLocale)
   } catch {
     return defaultLocale
   }
@@ -65,4 +72,23 @@ export async function getTranslation(namespace?: string) {
       )
     },
   }
+}
+
+interface Props extends React.PropsWithChildren {
+  defaultNamespace: string
+}
+
+export async function TranslationProvider(props: Props) {
+  const locale = await getLocale()
+  const messages = await getMessages(locale)
+  const languages = await getLanguages()
+
+  return (
+    <TranslationProviderClient
+      {...props}
+      locale={locale}
+      messages={messages}
+      languages={languages}
+    />
+  )
 }

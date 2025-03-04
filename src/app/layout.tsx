@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from 'next/font/google'
+import { ThemeProvider } from '@/components/theme-provider'
 
 import './globals.css'
 import type { Metadata } from 'next'
@@ -26,10 +27,9 @@ export interface LocaleLayoutProps {
 
 export default async function LocaleLayout({ children }: LocaleLayoutProps) {
   const locale = await getLocale()
-  const messages = await getMessages(locale)
 
   return (
-    <html lang={locale} className="dark">
+    <html lang={locale} className="dark" suppressHydrationWarning>
       <head>
         <AnalyticsScript />
         <meta name="color-scheme" content="dark" />
@@ -37,13 +37,16 @@ export default async function LocaleLayout({ children }: LocaleLayoutProps) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
-        <TranslationProvider
-          locale={locale}
-          messages={messages}
-          defaultNamespace="common"
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
         >
-          {children}
-        </TranslationProvider>
+          <TranslationProvider defaultNamespace="common">
+            {children}
+          </TranslationProvider>
+        </ThemeProvider>
       </body>
     </html>
   )
