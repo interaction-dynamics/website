@@ -5,6 +5,13 @@ import { getTranslation } from '@/services/i18n/server'
 import { DarkModeToggle } from '@/components/dark-mode-toggle'
 import { showDeploy } from '@/flags'
 import { FeedbackButton } from '@/components/feedback-button'
+import {
+  SignInButton,
+  SignedOut,
+  SignUpButton,
+  SignedIn,
+  UserButton,
+} from '@/services/authentication'
 
 export default async function Index() {
   const { t } = await getTranslation()
@@ -17,6 +24,13 @@ export default async function Index() {
         <FeedbackButton />
         <DarkModeToggle />
         <LanguageSelector />
+        <SignedOut>
+          <SignInButton variant="outline" forceRedirectUrl="/dashboard" />
+          <SignUpButton forceRedirectUrl="/dashboard" />
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
       </nav>
       <main className="flex-1 flex flex-col items-center justify-between p-24">
         <h1>{t('Index.title')}</h1>

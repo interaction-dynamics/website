@@ -15,6 +15,7 @@
     "postinstall": "npx simple-git-hooks"
   },
   "dependencies": {
+    "@clerk/nextjs": "^6.12.3",
     "@flags-sdk/statsig": "^0.2.1",
     "@formatjs/intl-localematcher": "^0.6.0",
     "@next/third-parties": "^15.2.1",
