@@ -1,0 +1,6 @@
+{
+  "files.exclude": {
+    "**/.vercel": true,
+    "**/.next": true
+  }
+}
