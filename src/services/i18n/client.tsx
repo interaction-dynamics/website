@@ -30,7 +30,7 @@ export function useTranslations(namespace?: string) {
   return {
     locale,
     languages,
-    t: (key: string, specificNamespace: string) =>
+    t: (key: string, specificNamespace?: string) =>
       t(key, specificNamespace ?? namespace),
     changeLocale,
   }

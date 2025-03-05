@@ -3,5 +3,7 @@
     "**/.vercel": true,
     "**/.next": true
   },
-  "eslint.options": { "overrideConfigFile": "./eslint.config.mjs" }
+  "eslint.options": {
+    "overrideConfigFile": "./eslint.config.mjs"
+  }
 }
