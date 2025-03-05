@@ -89,6 +89,17 @@ Every time you set up a new hook, you should run the command `npx simple-git-hoo
 This project use [standard-version](https://github.com/conventional-changelog/standard-version) to handle versioning
 automatically.
 
+## Dependencies
+
+This project uses [pnpm](https://pnpm.io/) to manage dependencies. Please use `pnpm install` to install dependencies.
+
+You can also upgrade dependencies using the commands below:
+
+```bash
+npx npm-check-updates -u
+npm install
+```
+
 ## Architecture decisions
 
 This project uses [ADR](https://adr.github.io/) to document architecture decisions. When you take an archiveture decision, you can copy the template `docs/decisions/0000-madr-template.md` to `docs/decisions/<number>-my-decision.md` and fill it with your decision.
