@@ -42,7 +42,7 @@
     "@commitlint/config-conventional": "^19.7.1",
     "@eslint/eslintrc": "^3",
     "@playwright/test": "^1.50.1",
-    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/postcss": "^4.0.10",
     "@testing-library/jest-dom": "6.6.3",
     "@testing-library/react": "16.2.0",
     "@testing-library/user-event": "14.6.1",
@@ -60,7 +60,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "prettier": "3.5.3",
     "simple-git-hooks": "^2.11.1",
-    "tailwindcss": "^4",
+    "tailwindcss": "^4.0.10",
     "typescript": "5.8.2"
   },
   "simple-git-hooks": {
@@ -74,5 +74,9 @@
     "onlyBuiltDependencies": [
       "simple-git-hooks"
     ]
+  },
+  "resolutions": {
+    "path-to-regexp": "^6.3.0",
+    "cookie": "^0.7.0"
   }
 }
