@@ -37,3 +37,5 @@ next-env.d.ts
 test-results/
 
 .env
+# clerk configuration (can include secrets)
+/.clerk/
