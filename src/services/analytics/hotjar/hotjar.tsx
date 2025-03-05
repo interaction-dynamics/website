@@ -2,12 +2,6 @@
 import Script from 'next/script'
 
 export function HotJar() {
-  console.log(
-    'process.env.NODE_ENV',
-    process.env.NODE_ENV,
-    process.env.NEXT_PUBLIC_HOTJAR_ID
-  )
-
   if (
     process.env.NODE_ENV === 'production' &&
     process.env.NEXT_PUBLIC_HOTJAR_ID
