@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
+import { VercelToolbar } from '@vercel/toolbar/next'
 
 import './globals.css'
 import type { Metadata } from 'next'
@@ -27,6 +28,7 @@ export interface LocaleLayoutProps {
 
 export default async function LocaleLayout({ children }: LocaleLayoutProps) {
   const locale = await getLocale()
+  const shouldInjectToolbar = process.env.NODE_ENV === 'development'
 
   return (
     <html lang={locale} className="dark" suppressHydrationWarning>
@@ -47,6 +49,7 @@ export default async function LocaleLayout({ children }: LocaleLayoutProps) {
             {children}
           </TranslationProvider>
         </ThemeProvider>
+        {shouldInjectToolbar && <VercelToolbar />}
       </body>
     </html>
   )
