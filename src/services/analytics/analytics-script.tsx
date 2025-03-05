@@ -1,5 +1,11 @@
-import { HotJar } from './hotjar/hotjar'
+import { GoogleProvider } from './google'
+import { HotJar } from './hotjar'
 
 export function AnalyticsScript() {
-  return <HotJar />
+  return (
+    <>
+      <HotJar />
+      <GoogleProvider />
+    </>
+  )
 }

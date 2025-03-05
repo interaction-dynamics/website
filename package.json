@@ -17,6 +17,7 @@
   "dependencies": {
     "@flags-sdk/statsig": "^0.2.1",
     "@formatjs/intl-localematcher": "^0.6.0",
+    "@next/third-parties": "^15.2.1",
     "@radix-ui/react-dropdown-menu": "^2.1.6",
     "@radix-ui/react-slot": "^1.1.2",
     "@vercel/toolbar": "^0.1.34",
