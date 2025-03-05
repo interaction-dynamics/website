@@ -78,6 +78,11 @@ These are the authorized types:
 If you add a feature or fix a bug, you need to provide a test verifying your
 improvement. You can launch tests using `yarn test`.
 
+## Chrome extensions
+
+- [React Dev tools](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+- [Vercel](https://chromewebstore.google.com/detail/vercel/lahhiofdgnbcgmemekkmjnpifojdaelb)
+
 ## Git hooks
 
 Few git hooks are installed to help you to respect the coding rules. You can find them in the package.json in the property "simple-git-hooks".
