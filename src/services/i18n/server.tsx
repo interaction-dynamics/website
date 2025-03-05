@@ -59,12 +59,14 @@ export async function getMessages(locale: string) {
   return Object.fromEntries(await Promise.all(promises))
 }
 
-export async function getTranslation(namespace?: string) {
+export async function getTranslations(namespace?: string) {
   const locale = await getLocale()
   const messages = await getMessages(locale)
+  const languages = await getLanguages()
 
   return {
     locale,
+    languages,
     t: (key: string, specificNamespace?: string) => {
       return findTranslation(
         key,
