@@ -4,6 +4,7 @@ import { LanguageSelector } from '../components/language-selector'
 import { getTranslation } from '@/services/i18n/server'
 import { DarkModeToggle } from '@/components/dark-mode-toggle'
 import { showDeploy } from '@/flags'
+import { FeedbackButton } from '@/components/feedback-button'
 
 export default async function Index() {
   const { t } = await getTranslation()
@@ -12,7 +13,8 @@ export default async function Index() {
 
   return (
     <div className="flex min-h-screen flex-col items-stretch">
-      <nav className="flex flex-row justify-end gap-4 p-4">
+      <nav className="flex flex-row justify-end items-stretch gap-4 p-4">
+        <FeedbackButton />
         <DarkModeToggle />
         <LanguageSelector />
       </nav>
