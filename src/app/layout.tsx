@@ -6,6 +6,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { getLocale, TranslationProvider } from '@/services/i18n'
 import { AnalyticsScript } from '@/services/analytics'
+import { ABTestingProvider } from '@/services/ab-testing'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -31,26 +32,28 @@ export default async function LocaleLayout({ children }: LocaleLayoutProps) {
   const shouldInjectToolbar = process.env.NODE_ENV === 'development'
 
   return (
-    <html lang={locale} className="dark" suppressHydrationWarning>
-      <head>
-        <AnalyticsScript />
-        <meta name="color-scheme" content="dark" />
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
+    <ABTestingProvider>
+      <html lang={locale} className="dark" suppressHydrationWarning>
+        <head>
+          <AnalyticsScript />
+          <meta name="color-scheme" content="dark" />
+        </head>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased `}
         >
-          <TranslationProvider defaultNamespace="common">
-            {children}
-          </TranslationProvider>
-        </ThemeProvider>
-        {shouldInjectToolbar && <VercelToolbar />}
-      </body>
-    </html>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <TranslationProvider defaultNamespace="common">
+              {children}
+            </TranslationProvider>
+          </ThemeProvider>
+          {shouldInjectToolbar && <VercelToolbar />}
+        </body>
+      </html>
+    </ABTestingProvider>
   )
 }
