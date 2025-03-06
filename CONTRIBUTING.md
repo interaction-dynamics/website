@@ -89,6 +89,10 @@ Few git hooks are installed to help you to respect the coding rules. You can fin
 
 Every time you set up a new hook, you should run the command `npx simple-git-hooks`.
 
+## Payments
+
+- https://docs.stripe.com/testing#cards
+
 ## Versioning
 
 This project use [standard-version](https://github.com/conventional-changelog/standard-version) to handle versioning
