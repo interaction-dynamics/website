@@ -10,8 +10,8 @@ import {
   namespaces,
   NEXT_LOCALE,
 } from './config'
-import { findTranslation } from './private/findTranslation'
-import { TranslationProviderClient } from './client'
+import { findTranslation } from './_private/findTranslation'
+import { TranslationProviderClient } from './_private/context'
 
 export async function getLanguages() {
   return languages
@@ -91,6 +91,7 @@ export async function TranslationProvider(props: Props) {
       locale={locale}
       messages={messages}
       languages={languages}
+      defaultNamespace={defaultNamespace}
     />
   )
 }
