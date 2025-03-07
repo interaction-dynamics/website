@@ -39,7 +39,7 @@
     "upgrade:dependencies": "npm-check-updates -u && pnpm install"
   },
   "dependencies": {
-    "@clerk/nextjs": "^6.12.3",
+    "@clerk/nextjs": "^6.12.4",
     "@flags-sdk/statsig": "^0.2.1",
     "@formatjs/intl-localematcher": "^0.6.0",
     "@next/third-parties": "^15.2.1",
