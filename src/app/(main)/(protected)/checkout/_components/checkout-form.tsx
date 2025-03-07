@@ -8,10 +8,6 @@ interface CheckoutFormProps {
   plans: Plan[]
 }
 
-const secureStripe = loadStripe(
-  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY ?? ''
-)
-
 const renderProduct = (
   product: string | Stripe.Product | Stripe.DeletedProduct
 ) => {
@@ -28,6 +24,9 @@ const renderProduct = (
 
 export function CheckoutForm({ plans }: CheckoutFormProps) {
   const handleSubmit = async (priceId: string) => {
+    const secureStripe = loadStripe(
+      process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY ?? ''
+    )
     const session = await createPaymentCheckoutSession(priceId)
 
     if (!session) {
