@@ -12,7 +12,7 @@ export async function Footer() {
   }))
 
   const links = Object.entries(siteMap).map(([name, href]) => ({
-    name: t(name),
+    name,
     href,
   }))
 
