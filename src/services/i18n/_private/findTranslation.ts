@@ -21,7 +21,7 @@ export const findTranslation = (
       return acc[key]
     }, translations) as string
   } catch {
-    console.error('missing textkey', key)
+    console.error('Impossible to find translation:', key)
     return key
   }
 }
