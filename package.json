@@ -12,7 +12,8 @@
     "test:ci": "jest --ci",
     "test:e2e": "playwright test",
     "commitlint": "commitlint --from=HEAD~1",
-    "postinstall": "npx simple-git-hooks"
+    "postinstall": "npx simple-git-hooks",
+    "upgrade:dependencies": "npm-check-updates -u && pnpm install"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.12.3",
@@ -83,6 +84,7 @@
   },
   "resolutions": {
     "path-to-regexp": "^6.3.0",
-    "cookie": "^0.7.0"
+    "cookie": "^0.7.0",
+    "axios": "1.8.2"
   }
 }

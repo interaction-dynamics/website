@@ -3,6 +3,10 @@ import WithVercelToolbar from '@vercel/toolbar/plugins/next'
 
 const withVercelToolbar = WithVercelToolbar()
 
-const nextConfig: NextConfig = {}
+const nextConfig: NextConfig = {
+  experimental: {
+    authInterrupts: true,
+  },
+}
 
 export default withVercelToolbar(nextConfig)
