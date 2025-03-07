@@ -89,6 +89,26 @@ Few git hooks are installed to help you to respect the coding rules. You can fin
 
 Every time you set up a new hook, you should run the command `npx simple-git-hooks`.
 
+## Translations
+
+This project uses a custom implementation of react-i18n to handle translations. You can find the translations in the `src/messages/translations` folder.
+
+Each file in this folder is a namespace.
+
+To add a new translation:
+
+- if the translation should be in a new namespace
+  - create a new file in the `src/messages/translations` folder
+  - add the namespace in `src/services/i18n/config.tsx`
+- use the `useTranslation` hook to access translations in your client components and `getTranslations` in your server components
+- write english version first
+- use prompt below to translate in other languages
+
+```bash
+read the attached json and translate the values in french while keeping the same keys:
+# ...
+```
+
 ## Payments
 
 - https://docs.stripe.com/testing#cards
