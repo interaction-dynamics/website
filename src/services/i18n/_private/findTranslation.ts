@@ -6,13 +6,22 @@ export const findTranslation = (
 ): string => {
   const keys = key.split('.')
 
-  return keys.reduce((acc: Translations | string, key: string) => {
-    if (typeof acc === 'string') return acc
+  try {
+    return keys.reduce((acc: Translations | string, key: string) => {
+      if (typeof acc === 'string') return acc
 
-    if (acc === undefined) {
-      throw new Error(`Impossible to find translation: ${key}`)
-    }
+      if (acc === undefined) {
+        throw new Error(`Impossible to find translation: ${key}`)
+      }
 
-    return key in acc ? acc[key] : ''
-  }, translations) as string
+      if (!(key in acc)) {
+        throw new Error(`Impossible to find translation: ${key}`)
+      }
+
+      return acc[key]
+    }, translations) as string
+  } catch {
+    console.error('missing textkey', key)
+    return key
+  }
 }

@@ -1,7 +1,30 @@
-}
+{
   "name": "website",
+  "description": "A boilerplate for next.js",
   "version": "0.1.0",
   "private": true,
+  "socials": {
+    "x": "https://example.com",
+    "youtube": "https://example.com",
+    "tiktok": "",
+    "instagram": "https://example.com",
+    "facebook": "https://example.com",
+    "linkedin": "",
+    "github": "https://example.com",
+    "slack": "",
+    "gitlab": "",
+    "twitch": "",
+    "pinterest": "",
+    "whatsapp": "",
+    "snapchat": "",
+    "wechat": ""
+  },
+  "site_map": {
+    "About": "/about",
+    "Blog": "/blog",
+    "Contact": "/contact",
+    "Legal": "/legal"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
