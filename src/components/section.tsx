@@ -1,3 +1,5 @@
+import { Typography } from './typography'
+
 export interface SectionProps {
   title: React.ReactNode
   children?: React.ReactNode
@@ -6,9 +8,7 @@ export interface SectionProps {
 export function Section({ title, children }: SectionProps) {
   return (
     <main className="p-10">
-      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-        {title}
-      </h1>
+      <Typography variant="h1">{title}</Typography>
       <div>{children}</div>
     </main>
   )
