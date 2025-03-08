@@ -34,7 +34,7 @@ export function TranslationProviderClient({
       locale,
       languages,
       t: (key: string, namespace?: string) => {
-        return findTranslation(key, messages[namespace ?? defaultNamespace])
+        return findTranslation(key, messages, namespace ?? defaultNamespace)
       },
     }),
     [messages, locale, languages, defaultNamespace]

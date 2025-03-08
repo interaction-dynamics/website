@@ -69,10 +69,8 @@ export async function getTranslations(namespace?: string) {
     locale,
     languages,
     t: (key: string, specificNamespace?: string) => {
-      return findTranslation(
-        key,
-        messages[specificNamespace ?? namespace ?? defaultNamespace]
-      )
+      const foundNamespace = specificNamespace ?? namespace ?? defaultNamespace
+      return findTranslation(key, messages, foundNamespace)
     },
   }
 }
