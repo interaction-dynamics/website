@@ -5,7 +5,14 @@ export const languages: Language[] = [
   { label: 'Français', locale: 'fr' },
 ]
 
-export const namespaces = ['common', 'dashboard', 'pricing', 'email', 'footer']
+export const namespaces = [
+  'common',
+  'dashboard',
+  'pricing',
+  'email',
+  'footer',
+  'faq',
+]
 
 export const defaultNamespace = 'common'
 

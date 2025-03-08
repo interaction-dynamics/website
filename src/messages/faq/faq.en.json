@@ -1,0 +1,24 @@
+{
+  "faq": [
+    {
+      "question": "How do I create an account?",
+      "answer": "To create an account, click on the \"Sign Up\" button in the top right corner of our website. Fill in your details in the registration form and click \"Create Account\". You'll receive a confirmation email to verify your account."
+    },
+    {
+      "question": "What payment methods do you accept?",
+      "answer": "We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers. For enterprise customers, we also offer invoicing options. All payments are processed securely through our payment gateway."
+    },
+    {
+      "question": "Can I cancel my subscription at any time?",
+      "answer": "Yes, you can cancel your subscription at any time. To cancel your subscription, go to your account settings and click on the \"Cancel Subscription\" button. Your subscription will be canceled immediately, and you won't be charged for the next billing cycle."
+    },
+    {
+      "question": "How can I contact customer support?",
+      "answer": "Our customer support team is available 24/7. You can reach us through the \"Contact Us\" form on our website, by emailing support@example.com, or by calling our toll-free number at 1-800-123-4567. We typically respond to email inquiries within 24 hours."
+    },
+    {
+      "question": "Do you offer refunds?",
+      "answer": "We take data security very seriously. All data is encrypted both in transit and at rest. We use industry-standard security protocols and regularly undergo security audits. We never share your personal information with third parties without your consent. For more details, please review our Privacy Policy."
+    }
+  ]
+}
