@@ -1,0 +1,24 @@
+{
+  "faq": [
+    {
+      "question": "Comment créer un compte ?",
+      "answer": "Pour créer un compte, cliquez sur le bouton \"S'inscrire\" en haut à droite de notre site Web. Remplissez vos informations dans le formulaire d'inscription et cliquez sur \"Créer un compte\". Vous recevrez un e-mail de confirmation pour vérifier votre compte."
+    },
+    {
+      "question": "Quels modes de paiement acceptez-vous ?",
+      "answer": "Nous acceptons toutes les principales cartes de crédit (Visa, MasterCard, American Express), PayPal et les virements bancaires. Pour les clients entreprises, nous proposons également des options de facturation. Tous les paiements sont traités de manière sécurisée via notre passerelle de paiement."
+    },
+    {
+      "question": "Puis-je annuler mon abonnement à tout moment ?",
+      "answer": "Oui, vous pouvez annuler votre abonnement à tout moment. Pour annuler votre abonnement, allez dans les paramètres de votre compte et cliquez sur le bouton \"Annuler l'abonnement\". Votre abonnement sera immédiatement annulé et vous ne serez pas facturé pour le prochain cycle de facturation."
+    },
+    {
+      "question": "Comment puis-je contacter le support client ?",
+      "answer": "Notre équipe de support client est disponible 24h/24 et 7j/7. Vous pouvez nous contacter via le formulaire \"Contactez-nous\" sur notre site Web, par e-mail à support@example.com, ou en appelant notre numéro sans frais au 1-800-123-4567. Nous répondons généralement aux demandes par e-mail dans un délai de 24 heures."
+    },
+    {
+      "question": "Proposez-vous des remboursements ?",
+      "answer": "Nous prenons la sécurité des données très au sérieux. Toutes les données sont cryptées à la fois en transit et au repos. Nous utilisons des protocoles de sécurité standard de l'industrie et effectuons régulièrement des audits de sécurité. Nous ne partageons jamais vos informations personnelles avec des tiers sans votre consentement. Pour plus de détails, veuillez consulter notre Politique de confidentialité."
+    }
+  ]
+}
