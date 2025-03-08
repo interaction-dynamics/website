@@ -40,9 +40,19 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Playwright (including accessibility tests)
 - Commitlint
 - Github Actions
+- Dark mode
 - Custom Translation system
 - Simple Git Hooks
 - [shadcn/ui](https://ui.shadcn.com/)
+- Stripe
+- Google Analytics
+- Hotjar
+- Markdown support
+- Sanity
+- Mailgun
+- Clerk
+- Custom Error pages
+- Localized date and time formatting
 
 ### Features
 

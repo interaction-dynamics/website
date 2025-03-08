@@ -23,14 +23,14 @@ Please consider these guidelines when filing a pull request:
 - Follow the [Coding Rules](#coding-rules)
 - Follow the [Commit Rules](#commit-rules)
 - Make sure you rebased the current master branch when filing the pull request
-- Follow [Test guidelines](#tests)
+- Follow [Test guidelines](./#tests)
 - Squash your commits when filing the pull request
 - Provide a short title with a maximum of 100 characters
 - Provide a more detailed description containing
-  _ What you want to achieve
-  _ What you changed
-  _ What you added
-  _ What you removed
+  - What you want to achieve
+  - What you changed
+  - What you added
+  - What you removed
 - For significant changes, post also an issue before to know if your idea has a chance to be accepted
 
 ## Coding Rules
@@ -44,7 +44,6 @@ To keep the code base of commitlint neat and tidy the following rules apply to e
 
 > use commands `yarn lint` and `yarn format` to be sure your code
 > respect coding rules.
-
 > You can also use `npx prettier --write .` to fix prettier errors
 
 ## Commit Rules
@@ -111,12 +110,28 @@ read the attached json and translate the values in french while keeping the same
 
 ## Payments
 
-- https://docs.stripe.com/testing#cards
+If you want to test the payment in the `/checkout` page, you can use these [card numbers](https://docs.stripe.com/testing#cards).
 
 ## Versioning
 
 This project use [standard-version](https://github.com/conventional-changelog/standard-version) to handle versioning
 automatically.
+
+## Environment variables
+
+### Github Actions
+
+If you use github actions, you will need to add some of the environment variables in the github secrets. You can find the list of environment variables in the `.github/workflows/validate.yml`.
+
+You will also need to add them to the dependabot on github.com.
+
+### Vercel
+
+If you use vercel, you can set environment variables in the vercel dashboard. Then use `vercel env pull` to get the environment variables locally.
+
+### Local
+
+If you want to set environment variables locally, you can create a `.env` file at the root of the project and add your environment variables in it.
 
 ## Dependencies
 

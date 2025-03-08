@@ -21,7 +21,7 @@ export function ErrorLayout({
   children,
 }: ErrorLayoutProps) {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-4 py-12 bg-gradient-to-b from-background to-muted/50">
+    <div className="flex flex-col items-center justify-center min-h-screen px-4 py-12">
       <div className="w-full max-w-md space-y-8 text-center">
         <div className="relative h-48 mx-auto">
           <div className="absolute inset-0 flex items-center justify-center">

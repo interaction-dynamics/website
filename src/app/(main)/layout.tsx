@@ -8,6 +8,7 @@ import {
   SignedIn,
   UserButton,
 } from '@/services/authentication'
+import { Footer } from '@/components/sitemap-footer'
 
 interface MainLayoutProps {
   children: React.ReactNode
@@ -16,7 +17,7 @@ interface MainLayoutProps {
 export default function MainLayout({ children }: MainLayoutProps) {
   return (
     <div className="flex min-h-screen flex-col items-stretch">
-      <nav className="flex flex-row justify-end items-stretch gap-4 p-4">
+      <nav className="flex flex-row justify-end items-stretch gap-4 p-4 sticky top-0">
         <FeedbackButton />
         <DarkModeToggle />
         <LanguageSelector />
@@ -28,7 +29,8 @@ export default function MainLayout({ children }: MainLayoutProps) {
           <UserButton />
         </SignedIn>
       </nav>
-      {children}
+      <div className="flex-1">{children}</div>
+      <Footer />
     </div>
   )
 }
