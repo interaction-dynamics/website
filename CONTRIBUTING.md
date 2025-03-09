@@ -108,6 +108,17 @@ read the attached json and translate the values in french while keeping the same
 # ...
 ```
 
+### Components
+
+If you need to create React components, you can use [v0.dev](https://v0.dev/) to generate a component.
+
+You can also pick a component from one of these libraries:
+
+- [originui](https://originui.com/)
+- [https://magicui.design/](https://magicui.design/)
+- [aceternity](https://ui.aceternity.com/)
+- [ever-ui](https://www.ever-ui.com/)
+
 ## Payments
 
 If you want to test the payment in the `/checkout` page, you can use these [card numbers](https://docs.stripe.com/testing#cards).
