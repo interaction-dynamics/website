@@ -1,6 +1,7 @@
 'use client'
 import { createContext, useMemo } from 'react'
-import { Language, Messages } from '../types'
+import { Messages } from '../../_types/messages'
+import { Language } from '../../_types/language'
 import { findTranslation } from './findTranslation'
 
 interface TranslationContextType {

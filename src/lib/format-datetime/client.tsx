@@ -1,4 +1,4 @@
-import { useTranslations } from '@/services/i18n'
+import { useTranslations } from '@/services/translation'
 import {
   DateFormatShortOption,
   formatDatetimeInternal,

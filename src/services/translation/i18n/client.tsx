@@ -1,6 +1,6 @@
 'use client'
 import { useContext } from 'react'
-import { changeLocale } from '@/services/i18n/server'
+import { changeLocale } from '@/services/translation'
 import { TranslationContext } from './_private/context'
 
 export function useTranslations(namespace?: string) {

@@ -12,7 +12,7 @@ import {
 import { Switch } from '@/components/ui/switch'
 import { Label } from '@/components/ui/label'
 import { useState } from 'react'
-import { useTranslations } from '@/services/i18n'
+import { useTranslations } from '@/services/translation'
 
 interface Plan {
   name: string

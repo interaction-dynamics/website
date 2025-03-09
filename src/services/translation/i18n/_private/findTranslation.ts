@@ -1,4 +1,4 @@
-import { Translations } from '../types'
+import { Translations } from '../../_types/translations'
 
 export const findTranslation = (
   key: string,
