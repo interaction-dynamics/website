@@ -3,15 +3,14 @@ import { headers } from 'next/headers'
 import { match } from '@formatjs/intl-localematcher'
 import { cookies } from 'next/headers'
 import Negotiator from 'negotiator'
-import {
-  defaultLocale,
-  defaultNamespace,
-  languages,
-  namespaces,
-  NEXT_LOCALE,
-} from './config'
+import { translationConfig } from '../../../../translations.config'
 import { findTranslation } from './_private/findTranslation'
 import { TranslationProviderClient } from './_private/context'
+
+const NEXT_LOCALE = 'next_locale'
+
+const { defaultLocale, defaultNamespace, namespaces, languages } =
+  translationConfig
 
 export async function getLanguages() {
   return languages
@@ -53,7 +52,7 @@ export async function changeLocale(locale: string) {
 export async function getMessages(locale: string) {
   const promises = namespaces.map(async (namespace) => [
     namespace,
-    (await import(`../../messages/translations/${locale}/${namespace}.json`))
+    (await import(`../../../messages/translations/${locale}/${namespace}.json`))
       .default,
   ])
 

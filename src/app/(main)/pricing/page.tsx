@@ -1,5 +1,5 @@
 import { PricingSection } from '@/components/pricing-section'
-import { getTranslations } from '@/services/i18n'
+import { getTranslations } from '@/services/translation'
 
 const plans = [
   {

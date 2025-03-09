@@ -1,5 +1,5 @@
 import { Section } from '@/components/section'
-import { getTranslations } from '@/services/i18n'
+import { getTranslations } from '@/services/translation'
 
 export default async function DashboardPage() {
   const { t } = await getTranslations('dashboard')

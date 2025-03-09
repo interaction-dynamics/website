@@ -4,7 +4,7 @@ import { VercelToolbar } from '@vercel/toolbar/next'
 
 import './globals.css'
 import type { Metadata } from 'next'
-import { getLocale, TranslationProvider } from '@/services/i18n'
+import { getLocale, TranslationProvider } from '@/services/translation'
 import { AnalyticsScript } from '@/services/analytics'
 import { ABTestingProvider } from '@/services/ab-testing'
 import { AuthenticationProvider } from '@/services/authentication'

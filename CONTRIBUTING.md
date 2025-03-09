@@ -98,7 +98,7 @@ To add a new translation:
 
 - if the translation should be in a new namespace
   - create a new file in the `src/messages/translations` folder
-  - add the namespace in `src/services/i18n/config.tsx`
+  - add the namespace in `src/services/translation/i18n/config.tsx`
 - use the `useTranslation` hook to access translations in your client components and `getTranslations` in your server components
 - write english version first
 - use prompt below to translate in other languages

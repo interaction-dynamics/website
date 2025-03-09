@@ -1,6 +1,6 @@
 'use server'
 import Image from 'next/image'
-import { getTranslations } from '@/services/i18n/server'
+import { getTranslations } from '@/services/translation'
 import { showDeploy } from '@/flags'
 
 export default async function Index() {

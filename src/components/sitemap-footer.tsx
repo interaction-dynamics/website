@@ -1,7 +1,7 @@
 import { companyName, siteMap, socials } from '@/lib/constants'
 import { getCurrentYear } from '@/lib/current-date'
 import { getSocialIcon } from '@/lib/get-social-icon'
-import { getTranslations } from '@/services/i18n'
+import { getTranslations } from '@/services/translation'
 
 export async function Footer() {
   const { t } = await getTranslations('footer')

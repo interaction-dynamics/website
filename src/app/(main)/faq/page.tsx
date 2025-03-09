@@ -4,7 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion'
-import { getTranslations } from '@/services/i18n'
+import { getTranslations } from '@/services/translation'
 
 export default async function FaqPage() {
   const { locale, t } = await getTranslations('faq')

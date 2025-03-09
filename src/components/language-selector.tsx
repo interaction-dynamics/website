@@ -1,5 +1,5 @@
 'use client'
-import { useTranslations } from '@/services/i18n'
+import { useTranslations } from '@/services/translation'
 import { Button } from '@/components/ui/button'
 import { Globe } from 'lucide-react'
 import {

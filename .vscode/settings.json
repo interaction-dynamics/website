@@ -1,7 +1,9 @@
 {
   "files.exclude": {
     "**/.vercel": true,
-    "**/.next": true
+    "**/.next": true,
+    "**/.clerk": true,
+    "**/next-env.d.ts": true
   },
   "eslint.options": {
     "overrideConfigFile": "./eslint.config.mjs"
