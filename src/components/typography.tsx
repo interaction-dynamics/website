@@ -22,18 +22,21 @@ export interface TypographyProps
   children: React.ReactNode
   className?: string
   component?: React.ElementType
+  id?: string
 }
 
 export function Typography({
   variant,
   component,
   className,
+  id,
   ...props
 }: TypographyProps) {
   const Comp = component ?? variant ?? 'h1'
 
   return (
     <Comp
+      id={id}
       className={cn(typographyVariants({ variant, className }), className)}
       {...props}
     />
