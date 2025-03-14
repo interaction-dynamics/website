@@ -21,14 +21,20 @@ export interface TypographyProps
   extends VariantProps<typeof typographyVariants> {
   children: React.ReactNode
   className?: string
+  component?: React.ElementType
 }
 
-export function Typography({ variant, className, ...props }: TypographyProps) {
-  const Comp = variant ?? 'h1'
+export function Typography({
+  variant,
+  component,
+  className,
+  ...props
+}: TypographyProps) {
+  const Comp = component ?? variant ?? 'h1'
 
   return (
     <Comp
-      className={cn(typographyVariants({ variant, className }))}
+      className={cn(typographyVariants({ variant, className }), className)}
       {...props}
     />
   )

@@ -13,10 +13,13 @@ const mg = mailgun.client({
   key: process.env.MAILGUN_API_KEY ?? '',
 })
 
-export function sendEmail(email: Email) {
+export async function sendEmail(email: Email) {
   console.log('sendEmail', email)
-  mg.messages
-    .create(process.env.MAILGUN_DOMAIN ?? '', { ...email })
+  return mg.messages
+    .create(process.env.MAILGUN_DOMAIN ?? '', {
+      from: `Mailgun Sandbox <postmaster@${process.env.MAILGUN_DOMAIN}>`,
+      ...email,
+    })
     .then((msg) => console.log(msg)) // logs response data
     .catch((err) => console.error(err)) // logs any error
 }

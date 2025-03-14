@@ -1,3 +1,4 @@
+'use server'
 import { Post } from '@/entities/post'
 import { createClient } from '@sanity/client'
 import { mapPost } from './adapters/post'

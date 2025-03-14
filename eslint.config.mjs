@@ -11,6 +11,10 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 })
 
+const customConfig = [
+  // ... any rules you want to add
+]
+
 const eslintConfig = [
   ...compat.extends('next/core-web-vitals', 'next/typescript'),
   {
@@ -45,6 +49,7 @@ const eslintConfig = [
       'jest/valid-expect': 'error',
     },
   },
+  ...customConfig,
 ]
 
 export default eslintConfig
