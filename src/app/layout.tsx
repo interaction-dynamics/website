@@ -7,7 +7,6 @@ import type { Metadata } from 'next'
 import { dir, getLocale, TranslationProvider } from '@/services/translation'
 import { AnalyticsScript } from '@/services/analytics'
 import { ABTestingProvider } from '@/services/ab-testing'
-import { AuthenticationProvider } from '@/services/authentication'
 import { description, productName } from '@/lib/constants'
 
 const geistSans = Geist({
@@ -34,29 +33,27 @@ export default async function LocaleLayout({ children }: LocaleLayoutProps) {
   const shouldInjectToolbar = process.env.NODE_ENV === 'development'
 
   return (
-    <AuthenticationProvider>
-      <ABTestingProvider>
-        <html lang={locale} dir={dir(locale)} suppressHydrationWarning>
-          <head>
-            <AnalyticsScript />
-          </head>
-          <body
-            className={`${geistSans.variable} ${geistMono.variable} antialiased `}
+    <ABTestingProvider>
+      <html lang={locale} suppressHydrationWarning>
+        <head>
+          <AnalyticsScript />
+        </head>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth`}
+        >
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
           >
-            <ThemeProvider
-              attribute="class"
-              defaultTheme="system"
-              enableSystem
-              disableTransitionOnChange
-            >
-              <TranslationProvider defaultNamespace="common">
-                {children}
-              </TranslationProvider>
-            </ThemeProvider>
-            {shouldInjectToolbar && <VercelToolbar />}
-          </body>
-        </html>
-      </ABTestingProvider>
-    </AuthenticationProvider>
+            <TranslationProvider defaultNamespace="common">
+              {children}
+            </TranslationProvider>
+          </ThemeProvider>
+          {shouldInjectToolbar && <VercelToolbar />}
+        </body>
+      </html>
+    </ABTestingProvider>
   )
 }

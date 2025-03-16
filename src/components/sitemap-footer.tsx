@@ -4,7 +4,7 @@ import { getSocialIcon } from '@/lib/get-social-icon'
 import { getTranslations } from '@/services/translation'
 
 export async function Footer() {
-  const { t } = await getTranslations('footer')
+  const { t } = await getTranslations('navigation')
 
   const socialsWithIcons = socials.map((social) => ({
     ...social,
@@ -49,7 +49,8 @@ export async function Footer() {
             ))}
         </div>
         <p className="mt-10 text-center text-sm/6 text-muted-foreground">
-          &copy; {getCurrentYear()} {companyName}. All rights reserved.
+          &copy; {getCurrentYear()} {companyName}.{' '}
+          {t('All rights reserved', 'footer')}
         </p>
       </div>
     </footer>
