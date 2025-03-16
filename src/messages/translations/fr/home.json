@@ -1,0 +1,49 @@
+{
+  "No bullshit": "Pas de baratin",
+  "100% value": "100% de valeur",
+  "Not Just Another Web Agency": "Pas juste une autre agence web",
+  "We Deliver or You Don t Pay": "Nous livrons, ou vous ne payez pas.",
+  "Contact Us": "Contactez-nous",
+  "We Solve the": "Nous résolvons",
+  "Hardest Web Challenges": "les défis web les plus complexes",
+  "Choose": "Choisissez",
+  "Why Businesses Love Working with Us": "Pourquoi les entreprises aiment travailler avec nous",
+  "Smart Project Management": "Gestion de projet intelligente",
+  "differentiator": {
+    "1": {
+      "title": "Gestion de projet intelligente",
+      "description": "Nous combinons les méthodes Kanban et no-estimate pour maximiser l'efficacité et la transparence. Attendez-vous à des mises à jour hebdomadaires pour suivre notre progression en toute simplicité."
+    },
+    "2": {
+      "title": "Technologies de pointe",
+      "description": "Nous utilisons React, Next.js et Tailwind—des technologies largement adoptées et évolutives qui garantissent des produits stables et une transition fluide vers n'importe quel développeur."
+    },
+    "3": {
+      "title": "Développement boosté par l'IA",
+      "description": "Nous exploitons des outils d'IA comme ChatGPT, Cursor et V0.dev pour écrire du code de haute qualité à une vitesse extrême, vous faisant ainsi économiser du temps et du budget."
+    },
+    "4": {
+      "title": "Code robuste et évolutif",
+      "description": "Nos pratiques de développement privilégient la stabilité, la maintenabilité et l'évolutivité, garantissant ainsi une fiabilité à long terme."
+    },
+    "5": {
+      "title": "Approche centrée sur l'UX",
+      "description": "Un excellent produit commence par une expérience utilisateur exceptionnelle. Nous concevons nos solutions pour offrir clarté, accessibilité et une utilisation fluide grâce à des méthodes centrées sur l'utilisateur."
+    },
+    "6": {
+      "title": "Satisfait ou remboursé",
+      "description": "Nous croyons en la qualité de notre travail. Si vous n'êtes pas 100% satisfait de la première livraison, nous vous remboursons—sans poser de questions."
+    }
+  },
+  "contact": {
+    "title": "Construisons quelque chose d'exceptionnel",
+    "subject": "Sujet",
+    "message": "Message",
+    "message placeholder": "Donnez-nous plus de détails",
+    "email": "E-mail",
+    "email placeholder": "john.doe@gmail.com",
+    "send": "Envoyer",
+    "message sent": "Message envoyé !",
+    "message feedback": "Merci pour votre message ! Nous vous répondrons dès que possible."
+  }
+}
