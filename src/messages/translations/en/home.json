@@ -1,0 +1,49 @@
+{
+  "No bullshit": "No bullsh*t",
+  "100% value": "100% value",
+  "Not Just Another Web Agency": "Not Just Another Web Agency",
+  "We Deliver or You Don t Pay": "We Deliver, or You Don’t Pay.",
+  "Contact Us": "Contact Us",
+  "We Solve the": "We Solve the",
+  "Hardest Web Challenges": "Hardest Web Challenges",
+  "Choose": "Choose",
+  "Why Businesses Love Working with Us": "Why Businesses Love Working with Us",
+  "Smart Project Management": "Smart Project Management",
+  "differentiator": {
+    "1": {
+      "title": "Smart Project Management",
+      "description": "We combine Kanban and no-estimate workflows to maximize efficiency and transparency. Expect weekly releases to track our progress seamlessly."
+    },
+    "2": {
+      "title": "Best-in-Class Technologies",
+      "description": "We use React, Next.js, and Tailwind—widely adopted, future-proof technologies that ensure stable products and smooth handovers to any developer."
+    },
+    "3": {
+      "title": "AI-Powered Development",
+      "description": "We leverage AI tools like ChatGPT, Cursor and V0.dev to write high-quality code at an extreme pace and save you budget/time."
+    },
+    "4": {
+      "title": "Robust & Scalable Code",
+      "description": "Our development practices prioritize stability, maintainability, and scalability, ensuring long-term reliability."
+    },
+    "5": {
+      "title": "UX-First Approach",
+      "description": "A great product starts with an exceptional user experience. We design for clarity, accessibility, and seamless usability using User-Centric methods."
+    },
+    "6": {
+      "title": "Satisfied or Refunded",
+      "description": "We believe in the quality of our work. If you’re not 100% satisfied with the first delivery, we’ll refund you—no questions asked."
+    }
+  },
+  "contact": {
+    "title": "Let's Build Something Amazing",
+    "subject": "Subject",
+    "message": "Message",
+    "message placeholder": "Give us more details",
+    "email": "Email",
+    "email placeholder": "john.doe@gmail.com",
+    "send": "Send",
+    "message sent": "Message sent!",
+    "message feedback": "Thank you for your message! We will answer you as soon as possible."
+  }
+}
