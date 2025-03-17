@@ -6,6 +6,7 @@ import Negotiator from 'negotiator'
 import { translationConfig } from '../../../../translations.config'
 import { findTranslation } from './_private/findTranslation'
 import { TranslationProviderClient } from './_private/context'
+import { Parameters } from '../_types/parameters'
 
 const NEXT_LOCALE = 'next_locale'
 
@@ -67,9 +68,13 @@ export async function getTranslations(namespace?: string) {
   return {
     locale,
     languages,
-    t: (key: string, specificNamespace?: string) => {
+    t: (
+      key: string,
+      parameters: Parameters = {},
+      specificNamespace?: string
+    ) => {
       const foundNamespace = specificNamespace ?? namespace ?? defaultNamespace
-      return findTranslation(key, messages, foundNamespace)
+      return findTranslation(key, messages, foundNamespace, parameters)
     },
   }
 }
