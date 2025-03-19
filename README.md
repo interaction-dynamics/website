@@ -1,6 +1,4 @@
-# boilerplate-next
-
-A boilerplate for [Next.js](https://nextjs.org/)
+# Marketing website
 
 ## Getting Started
 
