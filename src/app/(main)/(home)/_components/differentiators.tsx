@@ -59,8 +59,8 @@ export function Differentiators() {
 }
 
 interface DifferentiatorProps {
-  title: string
-  description: string
+  title: React.ReactNode
+  description: React.ReactNode
   icon: object
 }
 
