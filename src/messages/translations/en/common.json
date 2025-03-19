@@ -1,5 +1,7 @@
 {
   "Index": {
     "title": "Hello World"
-  }
+  },
+  "description": "This a boileplate using {{framework}}",
+  "placeholder": "Type something"
 }

@@ -1,5 +1,7 @@
 {
   "Index": {
     "title": "Bonjour"
-  }
+  },
+  "description": "Ceci utilise {{framework}}",
+  "placeholder": "Taper quelque chose"
 }
