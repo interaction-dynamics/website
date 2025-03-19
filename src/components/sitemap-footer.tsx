@@ -50,7 +50,7 @@ export async function Footer() {
         </div>
         <p className="mt-10 text-center text-sm/6 text-muted-foreground">
           &copy; {getCurrentYear()} {companyName}.{' '}
-          {t('All rights reserved', 'footer')}
+          {t('All rights reserved', {}, 'footer')}
         </p>
       </div>
     </footer>
