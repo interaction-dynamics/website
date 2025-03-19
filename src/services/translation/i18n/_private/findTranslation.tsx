@@ -8,7 +8,7 @@ const splitByArgs = (
 ): Array<string | { argName: string }> => {
   let tempStr = str
 
-  const array = []
+  const array: Array<string | { argName: string }> = []
 
   Object.keys(parameters).forEach((argName) => {
     const key = `{{${argName}}}`
@@ -44,6 +44,10 @@ export const replaceArgs = (str: string, parameters: Parameters) => {
 
     return ''
   })
+
+  if (Object.values(parameters).every((p) => typeof p === 'string')) {
+    return result.join('')
+  }
 
   return (
     <>
