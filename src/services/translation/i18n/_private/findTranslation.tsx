@@ -45,12 +45,6 @@ export const replaceArgs = (str: string, parameters: Parameters) => {
     return ''
   })
 
-  console.log(
-    'str',
-    str,
-    Object.values(parameters).every((p) => typeof p === 'string')
-  )
-
   if (Object.values(parameters).every((p) => typeof p === 'string')) {
     return result.join('')
   }
