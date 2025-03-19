@@ -62,7 +62,7 @@
     "@sanity/icons": "^3.7.0",
     "@sanity/image-url": "1",
     "@sanity/vision": "3",
-    "@stripe/stripe-js": "^6.0.0",
+    "@stripe/stripe-js": "^6.1.0",
     "@tsparticles/engine": "^3.8.1",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.8.1",
