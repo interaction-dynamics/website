@@ -8,11 +8,7 @@ const splitByArgs = (
 ): Array<string | { argName: string }> => {
   let tempStr = str
 
-<<<<<<< HEAD
   const array: Array<string | { argName: string }> = []
-=======
-  const array = []
->>>>>>> 117c222 (feat: add translation param (#39))
 
   Object.keys(parameters).forEach((argName) => {
     const key = `{{${argName}}}`
@@ -67,11 +63,7 @@ export const findTranslation = (
   messages: Translations,
   namespace: string,
   parameters: Parameters = {}
-<<<<<<< HEAD
 ): React.ReactNode | string => {
-=======
-): string | React.ReactNode => {
->>>>>>> 117c222 (feat: add translation param (#39))
   const keys = key.split('.')
 
   const translations = messages[namespace]
