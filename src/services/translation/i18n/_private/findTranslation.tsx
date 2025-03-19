@@ -63,7 +63,7 @@ export const findTranslation = (
   messages: Translations,
   namespace: string,
   parameters: Parameters = {}
-): string | React.ReactNode => {
+): React.ReactNode | string => {
   const keys = key.split('.')
 
   const translations = messages[namespace]
