@@ -103,7 +103,7 @@ export function Contact() {
                     <FormItem aria-required>
                       <Label>{t('contact.subject')}</Label>
                       <Input
-                        placeholder={t('contact.subject')}
+                        placeholder={t('contact.subject') as string}
                         required
                         {...field}
                       />
@@ -116,7 +116,7 @@ export function Contact() {
                     <FormItem aria-required>
                       <Label>{'contact.message'}</Label>
                       <Textarea
-                        placeholder={t('contact.message placeholder')}
+                        placeholder={t('contact.message placeholder') as string}
                         required
                         className="min-h-32"
                         {...field}
@@ -131,7 +131,7 @@ export function Contact() {
                       <Label>{t('contact.email')}</Label>
                       <Input
                         type="email"
-                        placeholder={t('contact.email placeholder')}
+                        placeholder={t('contact.email placeholder') as string}
                         required
                         {...field}
                       />
