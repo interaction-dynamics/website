@@ -4,7 +4,7 @@ import { VercelToolbar } from '@vercel/toolbar/next'
 
 import './globals.css'
 import type { Metadata } from 'next'
-import { getLocale, TranslationProvider } from '@/services/translation'
+import { dir, getLocale, TranslationProvider } from '@/services/translation'
 import { AnalyticsScript } from '@/services/analytics'
 import { ABTestingProvider } from '@/services/ab-testing'
 import { AuthenticationProvider } from '@/services/authentication'
@@ -36,7 +36,7 @@ export default async function LocaleLayout({ children }: LocaleLayoutProps) {
   return (
     <AuthenticationProvider>
       <ABTestingProvider>
-        <html lang={locale} suppressHydrationWarning>
+        <html lang={locale} dir={dir(locale)} suppressHydrationWarning>
           <head>
             <AnalyticsScript />
           </head>
