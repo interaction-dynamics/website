@@ -7,7 +7,6 @@ export const SocialIconRenderer = z
     z.object({
       className: z.string(),
       'aria-hidden': z.literal('true'),
-      fill: z.string(),
     })
   )
   .returns(z.custom<ReactNode>())

@@ -44,11 +44,7 @@ export async function Footer() {
                 target="_blank"
               >
                 <span className="sr-only">{item.name}</span>
-                <item.icon
-                  fill="currentColor"
-                  aria-hidden="true"
-                  className="size-6"
-                />
+                <item.icon aria-hidden="true" className="size-6" />
               </a>
             ))}
         </div>
