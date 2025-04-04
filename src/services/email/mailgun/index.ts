@@ -8,15 +8,22 @@ import { Email } from '../_types/email'
  */
 const mailgun = new Mailgun(formData)
 
-const mg = mailgun.client({
-  username: 'api',
-  key: process.env.MAILGUN_API_KEY ?? '',
-})
+let mg: ReturnType<typeof mailgun.client> | null = null
+
+const client = () => {
+  if (!mg) {
+    mg = mailgun.client({
+      username: 'api',
+      key: process.env.MAILGUN_API_KEY ?? '',
+    })
+  }
+
+  return mg
+}
 
 export async function sendEmail(email: Email) {
-  console.log('sendEmail', email)
-  return mg.messages
-    .create(process.env.MAILGUN_DOMAIN ?? '', {
+  return client()
+    .messages.create(process.env.MAILGUN_DOMAIN ?? '', {
       from: `Mailgun Sandbox <postmaster@${process.env.MAILGUN_DOMAIN}>`,
       ...email,
     })
