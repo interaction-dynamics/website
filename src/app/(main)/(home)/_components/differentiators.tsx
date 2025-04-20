@@ -43,7 +43,7 @@ export function Differentiators() {
         <Typography variant="h1" component="h2">
           {t('Why Businesses Love Working with Us')}
         </Typography>
-        <div className="grid grid-cols-3 gap-10 pt-10">
+        <div className="grid grid-col-1 md:grid-cols-3 gap-10 pt-10">
           {differentiators.map((differentiator, index) => (
             <Differentiator
               title={t(`differentiator.${index + 1}.title`)}

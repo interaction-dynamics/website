@@ -42,7 +42,7 @@ export async function Hero() {
                 </Button>
               </div>
             </div>
-            <div className="flex-[0_0_auto]">
+            <div className="hidden md:flex-[0_0_auto]">
               <HeroImage />
             </div>
           </div>

@@ -14,7 +14,7 @@ export function Navigation() {
   const { t } = useTranslations('navigation')
 
   return (
-    <NavigationMenu className="pr-2">
+    <NavigationMenu className="hidden md:block pr-2">
       <NavigationMenuList className="gap-2">
         {Object.entries(siteMap)
           .filter(([key]) => key !== 'Home')

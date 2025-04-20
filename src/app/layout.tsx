@@ -34,7 +34,7 @@ export default async function LocaleLayout({ children }: LocaleLayoutProps) {
 
   return (
     <ABTestingProvider>
-      <html lang={locale} suppressHydrationWarning>
+      <html lang={locale} dir={dir(locale)} suppressHydrationWarning>
         <head>
           <AnalyticsScript />
         </head>
