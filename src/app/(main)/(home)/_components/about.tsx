@@ -2,7 +2,7 @@ import { Typography } from '@/components/typography'
 
 export function About() {
   return (
-    <main className="min-h-[75vh] flex items-center justify-center">
+    <main className="min-h-[75vh] flex items-center justify-center w-full">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex items-center justify-center">
         <div className="flex-[1_1_100%]">
           <Typography variant="h1" component="h2" id="about">

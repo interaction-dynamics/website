@@ -17,7 +17,10 @@ export function PropositionValue() {
   const { t } = useTranslations('home')
 
   return (
-    <main className=" bg-white flex items-center justify-center" ref={ref}>
+    <main
+      className=" bg-white flex flex-col items-center justify-center"
+      ref={ref}
+    >
       <Container className="pt-40 text-black text-center">
         <Typography variant="h1" component="h2">
           We Solve the{' '}
@@ -80,16 +83,16 @@ export function PropositionValue() {
           </MarkedText>
           {` `}.
         </div>
-        <div className="h-[600px] flex items-center justify-center mt-20 text-black font-bold text-4xl leading-14 relative">
-          <div>
-            {t('Choose')}
-            <div className="text-4xl">
-              <UnderlinedText>{companyName}</UnderlinedText>
-            </div>
-          </div>
-          <Ripple mainCircleSize={150} />
-        </div>
       </Container>
+      <div className="h-[600px] w-full text-center flex items-center justify-center mt-20 text-black font-bold text-4xl leading-14 relative overflow-hidden">
+        <div>
+          {t('Choose')}
+          <div className="text-4xl">
+            <UnderlinedText>{companyName}</UnderlinedText>
+          </div>
+        </div>
+        <Ripple mainCircleSize={150} />
+      </div>
     </main>
   )
 }
