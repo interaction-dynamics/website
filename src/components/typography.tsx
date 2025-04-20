@@ -22,6 +22,7 @@ export interface TypographyProps
   children: React.ReactNode
   className?: string
   component?: React.ElementType
+  id?: string
 }
 
 export function Typography({
